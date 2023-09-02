@@ -33,11 +33,11 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            tbEcts = new TextBox();
+            tbYear = new TextBox();
+            tbCode = new TextBox();
+            tbLectureType = new TextBox();
+            tbTitle = new TextBox();
             label6 = new Label();
             listView1 = new ListView();
             button1 = new Button();
@@ -89,40 +89,40 @@
             label5.TabIndex = 4;
             label5.Text = "ECTS";
             // 
-            // textBox3
+            // tbEcts
             // 
-            textBox3.Location = new Point(320, 249);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(270, 23);
-            textBox3.TabIndex = 8;
+            tbEcts.Location = new Point(320, 249);
+            tbEcts.Name = "tbEcts";
+            tbEcts.Size = new Size(270, 23);
+            tbEcts.TabIndex = 8;
             // 
-            // textBox4
+            // tbYear
             // 
-            textBox4.Location = new Point(320, 220);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(270, 23);
-            textBox4.TabIndex = 9;
+            tbYear.Location = new Point(320, 220);
+            tbYear.Name = "tbYear";
+            tbYear.Size = new Size(270, 23);
+            tbYear.TabIndex = 9;
             // 
-            // textBox5
+            // tbCode
             // 
-            textBox5.Location = new Point(320, 187);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(270, 23);
-            textBox5.TabIndex = 10;
+            tbCode.Location = new Point(320, 187);
+            tbCode.Name = "tbCode";
+            tbCode.Size = new Size(270, 23);
+            tbCode.TabIndex = 10;
             // 
-            // textBox6
+            // tbLectureType
             // 
-            textBox6.Location = new Point(320, 153);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(270, 23);
-            textBox6.TabIndex = 11;
+            tbLectureType.Location = new Point(320, 153);
+            tbLectureType.Name = "tbLectureType";
+            tbLectureType.Size = new Size(270, 23);
+            tbLectureType.TabIndex = 11;
             // 
-            // textBox7
+            // tbTitle
             // 
-            textBox7.Location = new Point(320, 121);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(270, 23);
-            textBox7.TabIndex = 12;
+            tbTitle.Location = new Point(320, 121);
+            tbTitle.Name = "tbTitle";
+            tbTitle.Size = new Size(270, 23);
+            tbTitle.TabIndex = 12;
             // 
             // label6
             // 
@@ -158,6 +158,7 @@
             button2.TabIndex = 16;
             button2.Text = "Confirm";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // formNewSubject
             // 
@@ -169,11 +170,11 @@
             Controls.Add(button1);
             Controls.Add(listView1);
             Controls.Add(label6);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
+            Controls.Add(tbTitle);
+            Controls.Add(tbLectureType);
+            Controls.Add(tbCode);
+            Controls.Add(tbYear);
+            Controls.Add(tbEcts);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -192,11 +193,11 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private TextBox tbEcts;
+        private TextBox tbYear;
+        private TextBox tbCode;
+        private TextBox tbLectureType;
+        private TextBox tbTitle;
         private Label label6;
         private ListView listView1;
         private Button button1;

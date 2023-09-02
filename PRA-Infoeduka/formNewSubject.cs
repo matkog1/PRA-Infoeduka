@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL.Models;
+
 
 namespace PRA_Infoeduka
 {
@@ -15,6 +17,11 @@ namespace PRA_Infoeduka
         public formNewSubject()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
