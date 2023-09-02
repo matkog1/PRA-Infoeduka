@@ -12,13 +12,15 @@ namespace DAL.Repos
         
         public Subject CreateSubject(string title, string lectureType, string code, string year, string ects)
         {
-            Subject subject = new Subject();
-            subject.Title = title;
-            subject.LectureType = lectureType;
-            subject.Code = code;
-            subject.Year = year;
-            subject.ECTS = ects;
-        
+            Subject subject = new Subject
+            {
+                Title = title,
+                LectureType = lectureType,
+                Code = code,
+                Year = year,
+                ECTS = ects
+            };
+
             return subject;
         }
     }
