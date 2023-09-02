@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRA-Infoeduka", "PRA-Infoeduka\PRA-Infoeduka.csproj", "{F5458828-EE02-4E40-A517-0415A329E790}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRA-Infoeduka", "PRA-Infoeduka\PRA-Infoeduka.csproj", "{F5458828-EE02-4E40-A517-0415A329E790}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A9D7F4B-30B4-437C-A639-FBD9A20DA394} = {5A9D7F4B-30B4-437C-A639-FBD9A20DA394}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{5A9D7F4B-30B4-437C-A639-FBD9A20DA394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{5A9D7F4B-30B4-437C-A639-FBD9A20DA394}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
