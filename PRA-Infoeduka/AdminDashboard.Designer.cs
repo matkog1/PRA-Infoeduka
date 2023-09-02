@@ -32,6 +32,9 @@
             panelTop = new Panel();
             buttonNews = new Button();
             buttonPosts = new Button();
+            panelPosts = new Panel();
+            btnEditPost = new Button();
+            btnNewPost = new Button();
             buttonSubjects = new Button();
             panelSubjects = new Panel();
             buttonEditSubject = new Button();
@@ -41,13 +44,10 @@
             buttonEditUser = new Button();
             buttonNewUser = new Button();
             panelMainShow = new Panel();
-            panelPosts = new Panel();
-            button1 = new Button();
-            button2 = new Button();
             mainSidePanel.SuspendLayout();
+            panelPosts.SuspendLayout();
             panelSubjects.SuspendLayout();
             panelUsers.SuspendLayout();
-            panelPosts.SuspendLayout();
             SuspendLayout();
             // 
             // mainSidePanel
@@ -99,6 +99,42 @@
             buttonPosts.TextAlign = ContentAlignment.MiddleLeft;
             buttonPosts.UseVisualStyleBackColor = true;
             buttonPosts.Click += buttonPosts_Click;
+            // 
+            // panelPosts
+            // 
+            panelPosts.Controls.Add(btnEditPost);
+            panelPosts.Controls.Add(btnNewPost);
+            panelPosts.Dock = DockStyle.Top;
+            panelPosts.Location = new Point(3, 181);
+            panelPosts.Name = "panelPosts";
+            panelPosts.Size = new Size(200, 50);
+            panelPosts.TabIndex = 3;
+            // 
+            // btnEditPost
+            // 
+            btnEditPost.Dock = DockStyle.Top;
+            btnEditPost.FlatStyle = FlatStyle.Flat;
+            btnEditPost.ForeColor = Color.White;
+            btnEditPost.Location = new Point(0, 23);
+            btnEditPost.Name = "btnEditPost";
+            btnEditPost.Size = new Size(200, 23);
+            btnEditPost.TabIndex = 1;
+            btnEditPost.Text = "Edit Post";
+            btnEditPost.UseVisualStyleBackColor = true;
+            btnEditPost.Click += btnEditPost_Click;
+            // 
+            // btnNewPost
+            // 
+            btnNewPost.Dock = DockStyle.Top;
+            btnNewPost.FlatStyle = FlatStyle.Flat;
+            btnNewPost.ForeColor = Color.White;
+            btnNewPost.Location = new Point(0, 0);
+            btnNewPost.Name = "btnNewPost";
+            btnNewPost.Size = new Size(200, 23);
+            btnNewPost.TabIndex = 0;
+            btnNewPost.Text = "New Post";
+            btnNewPost.UseVisualStyleBackColor = true;
+            btnNewPost.Click += btnNewPost_Click;
             // 
             // buttonSubjects
             // 
@@ -210,40 +246,6 @@
             panelMainShow.Size = new Size(981, 681);
             panelMainShow.TabIndex = 1;
             // 
-            // panelPosts
-            // 
-            panelPosts.Controls.Add(button2);
-            panelPosts.Controls.Add(button1);
-            panelPosts.Dock = DockStyle.Top;
-            panelPosts.Location = new Point(3, 181);
-            panelPosts.Name = "panelPosts";
-            panelPosts.Size = new Size(200, 50);
-            panelPosts.TabIndex = 3;
-            // 
-            // button1
-            // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 23);
-            button1.TabIndex = 0;
-            button1.Text = "New Post";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Top;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 23);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Edit Post";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -256,11 +258,11 @@
             Text = "AdminDashboard";
             mainSidePanel.ResumeLayout(false);
             mainSidePanel.PerformLayout();
+            panelPosts.ResumeLayout(false);
             panelSubjects.ResumeLayout(false);
             panelSubjects.PerformLayout();
             panelUsers.ResumeLayout(false);
             panelUsers.PerformLayout();
-            panelPosts.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -280,7 +282,7 @@
         private Button buttonNewUser;
         private Panel panelMainShow;
         private Panel panelPosts;
-        private Button button2;
-        private Button button1;
+        private Button btnEditPost;
+        private Button btnNewPost;
     }
 }

@@ -23,50 +23,15 @@ namespace PRA_Infoeduka
             ShowSubjectsPanel();
         }
 
-        private void ShowSubjectsPanel()
-        {
-            if (panelSubjects.Visible)
-            {
-                panelSubjects.Visible = false;
-            }
-            else
-            {
-                panelSubjects.Visible = true;
-            }
-        }
 
         private void buttonUsers_Click(object sender, EventArgs e)
         {
             ShowUsersPanel();
         }
 
-        private void ShowUsersPanel()
+        private void buttonPosts_Click(object sender, EventArgs e)
         {
-            if (panelUsers.Visible)
-            {
-                panelUsers.Visible = false;
-            }
-            else
-            {
-                panelUsers.Visible = true;
-            }
-        }
-
-
-        private void LoadForm(Form form)
-        {
-            panelMainShow.Controls.Clear();
-            if (form == null) return;
-            EditFormSettings(form);
-            panelMainShow.Controls.Add(form);
-            form.Show();
-        }
-        private Form EditFormSettings(Form form)
-        {
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            return form;
+            ShowPostsPanel();
         }
 
         private void buttonNewUser_Click(object sender, EventArgs e)
@@ -92,10 +57,16 @@ namespace PRA_Infoeduka
             formEditSubject formEditSubject = new formEditSubject();
             LoadForm(formEditSubject);
         }
-
-        private void buttonPosts_Click(object sender, EventArgs e)
+        private void btnNewPost_Click(object sender, EventArgs e)
         {
-            ShowPostsPanel();
+            formNewPost formNewPost = new formNewPost();
+            LoadForm(formNewPost);
+        }
+
+        private void btnEditPost_Click(object sender, EventArgs e)
+        {
+            formEditPost formEditPost = new formEditPost();
+            LoadForm(formEditPost);
         }
 
         private void ShowPostsPanel()
@@ -108,6 +79,46 @@ namespace PRA_Infoeduka
             {
                 panelPosts.Visible = true;
             }
+        }
+
+        private void ShowUsersPanel()
+        {
+            if (panelUsers.Visible)
+            {
+                panelUsers.Visible = false;
+            }
+            else
+            {
+                panelUsers.Visible = true;
+            }
+        }
+
+        private void ShowSubjectsPanel()
+        {
+            if (panelSubjects.Visible)
+            {
+                panelSubjects.Visible = false;
+            }
+            else
+            {
+                panelSubjects.Visible = true;
+            }
+        }
+
+        private void LoadForm(Form form)
+        {
+            panelMainShow.Controls.Clear();
+            if (form == null) return;
+            EditFormSettings(form);
+            panelMainShow.Controls.Add(form);
+            form.Show();
+        }
+        private Form EditFormSettings(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            return form;
         }
     }
 }
