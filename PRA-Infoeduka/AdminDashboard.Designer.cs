@@ -41,9 +41,13 @@
             buttonEditUser = new Button();
             buttonNewUser = new Button();
             panelMainShow = new Panel();
+            panelPosts = new Panel();
+            button1 = new Button();
+            button2 = new Button();
             mainSidePanel.SuspendLayout();
             panelSubjects.SuspendLayout();
             panelUsers.SuspendLayout();
+            panelPosts.SuspendLayout();
             SuspendLayout();
             // 
             // mainSidePanel
@@ -52,6 +56,7 @@
             mainSidePanel.Controls.Add(panelTop);
             mainSidePanel.Controls.Add(buttonNews);
             mainSidePanel.Controls.Add(buttonPosts);
+            mainSidePanel.Controls.Add(panelPosts);
             mainSidePanel.Controls.Add(buttonSubjects);
             mainSidePanel.Controls.Add(panelSubjects);
             mainSidePanel.Controls.Add(buttonUsers);
@@ -93,12 +98,13 @@
             buttonPosts.Text = "Posts";
             buttonPosts.TextAlign = ContentAlignment.MiddleLeft;
             buttonPosts.UseVisualStyleBackColor = true;
+            buttonPosts.Click += buttonPosts_Click;
             // 
             // buttonSubjects
             // 
             buttonSubjects.AutoSize = true;
             buttonSubjects.Dock = DockStyle.Top;
-            buttonSubjects.Location = new Point(3, 181);
+            buttonSubjects.Location = new Point(3, 237);
             buttonSubjects.Name = "buttonSubjects";
             buttonSubjects.Size = new Size(203, 30);
             buttonSubjects.TabIndex = 3;
@@ -112,7 +118,7 @@
             panelSubjects.Controls.Add(buttonEditSubject);
             panelSubjects.Controls.Add(buttonNewSubject);
             panelSubjects.Dock = DockStyle.Top;
-            panelSubjects.Location = new Point(3, 217);
+            panelSubjects.Location = new Point(3, 273);
             panelSubjects.Name = "panelSubjects";
             panelSubjects.Size = new Size(200, 61);
             panelSubjects.TabIndex = 4;
@@ -129,6 +135,7 @@
             buttonEditSubject.TabIndex = 5;
             buttonEditSubject.Text = "Edit Subject";
             buttonEditSubject.UseVisualStyleBackColor = true;
+            buttonEditSubject.Click += buttonEditSubject_Click;
             // 
             // buttonNewSubject
             // 
@@ -142,12 +149,13 @@
             buttonNewSubject.TabIndex = 4;
             buttonNewSubject.Text = "New Subject";
             buttonNewSubject.UseVisualStyleBackColor = true;
+            buttonNewSubject.Click += buttonNewSubject_Click;
             // 
             // buttonUsers
             // 
             buttonUsers.AutoSize = true;
             buttonUsers.Dock = DockStyle.Top;
-            buttonUsers.Location = new Point(3, 284);
+            buttonUsers.Location = new Point(3, 340);
             buttonUsers.Name = "buttonUsers";
             buttonUsers.Size = new Size(200, 30);
             buttonUsers.TabIndex = 6;
@@ -160,7 +168,8 @@
             // 
             panelUsers.Controls.Add(buttonEditUser);
             panelUsers.Controls.Add(buttonNewUser);
-            panelUsers.Location = new Point(3, 320);
+            panelUsers.Dock = DockStyle.Top;
+            panelUsers.Location = new Point(3, 376);
             panelUsers.Name = "panelUsers";
             panelUsers.Size = new Size(200, 61);
             panelUsers.TabIndex = 7;
@@ -201,6 +210,40 @@
             panelMainShow.Size = new Size(981, 681);
             panelMainShow.TabIndex = 1;
             // 
+            // panelPosts
+            // 
+            panelPosts.Controls.Add(button2);
+            panelPosts.Controls.Add(button1);
+            panelPosts.Dock = DockStyle.Top;
+            panelPosts.Location = new Point(3, 181);
+            panelPosts.Name = "panelPosts";
+            panelPosts.Size = new Size(200, 50);
+            panelPosts.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Top;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(200, 23);
+            button1.TabIndex = 0;
+            button1.Text = "New Post";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Dock = DockStyle.Top;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(0, 23);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 23);
+            button2.TabIndex = 1;
+            button2.Text = "Edit Post";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -217,6 +260,7 @@
             panelSubjects.PerformLayout();
             panelUsers.ResumeLayout(false);
             panelUsers.PerformLayout();
+            panelPosts.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -235,5 +279,8 @@
         private Button buttonEditUser;
         private Button buttonNewUser;
         private Panel panelMainShow;
+        private Panel panelPosts;
+        private Button button2;
+        private Button button1;
     }
 }

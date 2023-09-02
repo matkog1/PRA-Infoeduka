@@ -15,6 +15,7 @@ namespace PRA_Infoeduka
         {
             panelSubjects.Visible = false;
             panelUsers.Visible = false;
+            panelPosts.Visible = false;
         }
 
         private void buttonSubjects_Click(object sender, EventArgs e)
@@ -78,6 +79,35 @@ namespace PRA_Infoeduka
         {
             formEditUser formEditUser = new formEditUser();
             LoadForm(formEditUser);
+        }
+
+        private void buttonNewSubject_Click(object sender, EventArgs e)
+        {
+            formNewSubject formNewSubject = new formNewSubject();
+            LoadForm(formNewSubject);
+        }
+
+        private void buttonEditSubject_Click(object sender, EventArgs e)
+        {
+            formEditSubject formEditSubject = new formEditSubject();
+            LoadForm(formEditSubject);
+        }
+
+        private void buttonPosts_Click(object sender, EventArgs e)
+        {
+            ShowPostsPanel();
+        }
+
+        private void ShowPostsPanel()
+        {
+            if (panelPosts.Visible)
+            {
+                panelPosts.Visible = false;
+            }
+            else
+            {
+                panelPosts.Visible = true;
+            }
         }
     }
 }
