@@ -67,5 +67,17 @@ namespace PRA_Infoeduka
         {
             ShowPostsPanel();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            formEditUser formEditUser = new formEditUser();
+            LoadForm(formEditUser);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            formUserSubjects formUserSubjects = new formUserSubjects();
+            LoadForm(formUserSubjects);
+        }
     }
 }
