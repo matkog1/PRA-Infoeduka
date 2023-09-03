@@ -8,6 +8,17 @@ namespace DAL.Models
 {
     public class Lecturer
     {
+        public Lecturer(string firstName, string lastName, string email, string address, string gSM, string userName, string password)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Address = address;
+            GSM = gSM;
+            UserName = userName;
+            Password = password;
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
 

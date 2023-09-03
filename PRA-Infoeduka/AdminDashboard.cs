@@ -48,8 +48,8 @@ namespace PRA_Infoeduka
 
         private void buttonNewSubject_Click(object sender, EventArgs e)
         {
-            formNewSubject formNewSubject = new formNewSubject();
-            LoadForm(formNewSubject);
+            newSubjectForm newSubjectForm = new newSubjectForm();
+            LoadForm(newSubjectForm);
         }
 
         private void buttonEditSubject_Click(object sender, EventArgs e)

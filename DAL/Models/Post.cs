@@ -8,6 +8,15 @@ namespace DAL.Models
 {
     public class Post
     {
+     
+        public Post(string title, string year, DateTime valid, string text)
+        {
+            Title = title;
+            Year = year;
+            Valid = valid;
+            Text = text;
+        }
+
         public string Title { get; set; }
         public string Year { get; set; }
 
