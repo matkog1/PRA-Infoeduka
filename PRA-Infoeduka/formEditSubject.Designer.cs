@@ -33,17 +33,17 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            tbTitle = new TextBox();
+            tbEcts = new TextBox();
+            tbYear = new TextBox();
+            tbCode = new TextBox();
+            tbLectureType = new TextBox();
             label6 = new Label();
             listView1 = new ListView();
             button1 = new Button();
             button2 = new Button();
             label7 = new Label();
-            comboBox1 = new ComboBox();
+            cbSubjects = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -91,40 +91,40 @@
             label5.TabIndex = 4;
             label5.Text = "Ects";
             // 
-            // textBox1
+            // tbTitle
             // 
-            textBox1.Location = new Point(320, 121);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 5;
+            tbTitle.Location = new Point(320, 121);
+            tbTitle.Name = "tbTitle";
+            tbTitle.Size = new Size(270, 23);
+            tbTitle.TabIndex = 5;
             // 
-            // textBox2
+            // tbEcts
             // 
-            textBox2.Location = new Point(320, 249);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(270, 23);
-            textBox2.TabIndex = 6;
+            tbEcts.Location = new Point(320, 187);
+            tbEcts.Name = "tbEcts";
+            tbEcts.Size = new Size(270, 23);
+            tbEcts.TabIndex = 6;
             // 
-            // textBox3
+            // tbYear
             // 
-            textBox3.Location = new Point(320, 220);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(270, 23);
-            textBox3.TabIndex = 7;
+            tbYear.Location = new Point(320, 220);
+            tbYear.Name = "tbYear";
+            tbYear.Size = new Size(270, 23);
+            tbYear.TabIndex = 7;
             // 
-            // textBox4
+            // tbCode
             // 
-            textBox4.Location = new Point(320, 187);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(270, 23);
-            textBox4.TabIndex = 8;
+            tbCode.Location = new Point(320, 257);
+            tbCode.Name = "tbCode";
+            tbCode.Size = new Size(270, 23);
+            tbCode.TabIndex = 8;
             // 
-            // textBox5
+            // tbLectureType
             // 
-            textBox5.Location = new Point(320, 153);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(270, 23);
-            textBox5.TabIndex = 9;
+            tbLectureType.Location = new Point(320, 153);
+            tbLectureType.Name = "tbLectureType";
+            tbLectureType.Size = new Size(270, 23);
+            tbLectureType.TabIndex = 9;
             // 
             // label6
             // 
@@ -161,6 +161,7 @@
             button2.TabIndex = 13;
             button2.Text = "Confirm";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label7
             // 
@@ -171,30 +172,30 @@
             label7.TabIndex = 14;
             label7.Text = "Subject";
             // 
-            // comboBox1
+            // cbSubjects
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(320, 82);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(270, 23);
-            comboBox1.TabIndex = 15;
+            cbSubjects.FormattingEnabled = true;
+            cbSubjects.Location = new Point(320, 82);
+            cbSubjects.Name = "cbSubjects";
+            cbSubjects.Size = new Size(270, 23);
+            cbSubjects.TabIndex = 15;
             // 
             // formEditSubject
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 676);
-            Controls.Add(comboBox1);
+            Controls.Add(cbSubjects);
             Controls.Add(label7);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(listView1);
             Controls.Add(label6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbLectureType);
+            Controls.Add(tbCode);
+            Controls.Add(tbYear);
+            Controls.Add(tbEcts);
+            Controls.Add(tbTitle);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -213,16 +214,16 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox tbTitle;
+        private TextBox tbEcts;
+        private TextBox tbYear;
+        private TextBox tbCode;
+        private TextBox tbLectureType;
         private Label label6;
         private ListView listView1;
         private Button button1;
         private Button button2;
         private Label label7;
-        private ComboBox comboBox1;
+        private ComboBox cbSubjects;
     }
 }
