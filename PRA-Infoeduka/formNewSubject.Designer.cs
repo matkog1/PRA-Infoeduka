@@ -28,66 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            labelTitle = new Label();
+            labelLectureType = new Label();
+            labelCode = new Label();
+            labelYear = new Label();
+            labelEcts = new Label();
             tbEcts = new TextBox();
             tbYear = new TextBox();
             tbCode = new TextBox();
             tbLectureType = new TextBox();
             tbTitle = new TextBox();
-            label6 = new Label();
+            labelOverview = new Label();
             listView1 = new ListView();
-            button1 = new Button();
-            button2 = new Button();
+            btnDiscard = new Button();
+            btnConfirm = new Button();
             SuspendLayout();
             // 
-            // label1
+            // labelTitle
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(230, 129);
-            label1.Name = "label1";
-            label1.Size = new Size(29, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Title";
+            labelTitle.AutoSize = true;
+            labelTitle.Location = new Point(230, 129);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(29, 15);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "Title";
             // 
-            // label2
+            // labelLectureType
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(228, 161);
-            label2.Name = "label2";
-            label2.Size = new Size(73, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Lecture Type";
+            labelLectureType.AutoSize = true;
+            labelLectureType.Location = new Point(228, 161);
+            labelLectureType.Name = "labelLectureType";
+            labelLectureType.Size = new Size(73, 15);
+            labelLectureType.TabIndex = 1;
+            labelLectureType.Text = "Lecture Type";
             // 
-            // label3
+            // labelCode
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(228, 195);
-            label3.Name = "label3";
-            label3.Size = new Size(35, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Code";
+            labelCode.AutoSize = true;
+            labelCode.Location = new Point(228, 195);
+            labelCode.Name = "labelCode";
+            labelCode.Size = new Size(35, 15);
+            labelCode.TabIndex = 2;
+            labelCode.Text = "Code";
             // 
-            // label4
+            // labelYear
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(230, 228);
-            label4.Name = "label4";
-            label4.Size = new Size(29, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Year";
+            labelYear.AutoSize = true;
+            labelYear.Location = new Point(230, 228);
+            labelYear.Name = "labelYear";
+            labelYear.Size = new Size(29, 15);
+            labelYear.TabIndex = 3;
+            labelYear.Text = "Year";
             // 
-            // label5
+            // labelEcts
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(230, 257);
-            label5.Name = "label5";
-            label5.Size = new Size(33, 15);
-            label5.TabIndex = 4;
-            label5.Text = "ECTS";
+            labelEcts.AutoSize = true;
+            labelEcts.Location = new Point(230, 257);
+            labelEcts.Name = "labelEcts";
+            labelEcts.Size = new Size(33, 15);
+            labelEcts.TabIndex = 4;
+            labelEcts.Text = "ECTS";
             // 
             // tbEcts
             // 
@@ -124,14 +124,14 @@
             tbTitle.Size = new Size(270, 23);
             tbTitle.TabIndex = 12;
             // 
-            // label6
+            // labelOverview
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(230, 295);
-            label6.Name = "label6";
-            label6.Size = new Size(56, 15);
-            label6.TabIndex = 13;
-            label6.Text = "Overview";
+            labelOverview.AutoSize = true;
+            labelOverview.Location = new Point(230, 295);
+            labelOverview.Name = "labelOverview";
+            labelOverview.Size = new Size(56, 15);
+            labelOverview.TabIndex = 13;
+            labelOverview.Text = "Overview";
             // 
             // listView1
             // 
@@ -141,24 +141,24 @@
             listView1.TabIndex = 14;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // btnDiscard
             // 
-            button1.Location = new Point(2, 651);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 15;
-            button1.Text = "Discard";
-            button1.UseVisualStyleBackColor = true;
+            btnDiscard.Location = new Point(2, 651);
+            btnDiscard.Name = "btnDiscard";
+            btnDiscard.Size = new Size(75, 23);
+            btnDiscard.TabIndex = 15;
+            btnDiscard.Text = "Discard";
+            btnDiscard.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnConfirm
             // 
-            button2.Location = new Point(888, 651);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 16;
-            button2.Text = "Confirm";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnConfirm.Location = new Point(888, 651);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(75, 23);
+            btnConfirm.TabIndex = 16;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // formNewSubject
             // 
@@ -166,20 +166,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 676);
             ControlBox = false;
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnConfirm);
+            Controls.Add(btnDiscard);
             Controls.Add(listView1);
-            Controls.Add(label6);
+            Controls.Add(labelOverview);
             Controls.Add(tbTitle);
             Controls.Add(tbLectureType);
             Controls.Add(tbCode);
             Controls.Add(tbYear);
             Controls.Add(tbEcts);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(labelEcts);
+            Controls.Add(labelYear);
+            Controls.Add(labelCode);
+            Controls.Add(labelLectureType);
+            Controls.Add(labelTitle);
             Name = "formNewSubject";
             Text = "formNewSubject";
             ResumeLayout(false);
@@ -188,19 +188,19 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label labelTitle;
+        private Label labelLectureType;
+        private Label labelCode;
+        private Label labelYear;
+        private Label labelEcts;
         private TextBox tbEcts;
         private TextBox tbYear;
         private TextBox tbCode;
         private TextBox tbLectureType;
         private TextBox tbTitle;
-        private Label label6;
+        private Label labelOverview;
         private ListView listView1;
-        private Button button1;
-        private Button button2;
+        private Button btnDiscard;
+        private Button btnConfirm;
     }
 }

@@ -31,13 +31,13 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
+            tbTitle = new TextBox();
+            cbYear = new ComboBox();
+            datePicker = new DateTimePicker();
             label4 = new Label();
-            richTextBox1 = new RichTextBox();
-            button1 = new Button();
-            button2 = new Button();
+            rtbText = new RichTextBox();
+            btnDiscard = new Button();
+            btnConfirm = new Button();
             SuspendLayout();
             // 
             // label1
@@ -67,27 +67,28 @@
             label3.TabIndex = 2;
             label3.Text = "Valid";
             // 
-            // textBox1
+            // tbTitle
             // 
-            textBox1.Location = new Point(211, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(661, 23);
-            textBox1.TabIndex = 3;
+            tbTitle.Location = new Point(211, 105);
+            tbTitle.Name = "tbTitle";
+            tbTitle.Size = new Size(661, 23);
+            tbTitle.TabIndex = 3;
             // 
-            // comboBox1
+            // cbYear
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(211, 148);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 4;
+            cbYear.FormattingEnabled = true;
+            cbYear.Location = new Point(211, 148);
+            cbYear.Name = "cbYear";
+            cbYear.Size = new Size(121, 23);
+            cbYear.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // datePicker
             // 
-            dateTimePicker1.Location = new Point(211, 190);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 5;
+            datePicker.Location = new Point(211, 190);
+            datePicker.Name = "datePicker";
+            datePicker.Size = new Size(200, 23);
+            datePicker.TabIndex = 5;
+            datePicker.ValueChanged += datePicker_ValueChanged;
             // 
             // label4
             // 
@@ -98,44 +99,45 @@
             label4.TabIndex = 6;
             label4.Text = "Text";
             // 
-            // richTextBox1
+            // rtbText
             // 
-            richTextBox1.Location = new Point(209, 248);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(664, 340);
-            richTextBox1.TabIndex = 7;
-            richTextBox1.Text = "";
+            rtbText.Location = new Point(209, 248);
+            rtbText.Name = "rtbText";
+            rtbText.Size = new Size(664, 340);
+            rtbText.TabIndex = 7;
+            rtbText.Text = "";
             // 
-            // button1
+            // btnDiscard
             // 
-            button1.Location = new Point(1, 651);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 8;
-            button1.Text = "Discard";
-            button1.UseVisualStyleBackColor = true;
+            btnDiscard.Location = new Point(1, 651);
+            btnDiscard.Name = "btnDiscard";
+            btnDiscard.Size = new Size(75, 23);
+            btnDiscard.TabIndex = 8;
+            btnDiscard.Text = "Discard";
+            btnDiscard.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnConfirm
             // 
-            button2.Location = new Point(889, 651);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 9;
-            button2.Text = "Confirm";
-            button2.UseVisualStyleBackColor = true;
+            btnConfirm.Location = new Point(889, 651);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(75, 23);
+            btnConfirm.TabIndex = 9;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // formNewPost
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 676);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(richTextBox1);
+            Controls.Add(btnConfirm);
+            Controls.Add(btnDiscard);
+            Controls.Add(rtbText);
             Controls.Add(label4);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
+            Controls.Add(datePicker);
+            Controls.Add(cbYear);
+            Controls.Add(tbTitle);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -150,12 +152,12 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private DateTimePicker dateTimePicker1;
+        private TextBox tbTitle;
+        private ComboBox cbYear;
+        private DateTimePicker datePicker;
         private Label label4;
-        private RichTextBox richTextBox1;
-        private Button button1;
-        private Button button2;
+        private RichTextBox rtbText;
+        private Button btnDiscard;
+        private Button btnConfirm;
     }
 }
