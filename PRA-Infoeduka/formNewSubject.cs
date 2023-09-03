@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL.Models;
-using DAL.Repos;
-
-
+using DAL.Repos.SubjectRepo;
 namespace PRA_Infoeduka
 {
     public partial class formNewSubject : Form
@@ -22,7 +20,7 @@ namespace PRA_Infoeduka
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
             Subject subject = repoSubject.CreateSubject(tbTitle.Text, tbLectureType.Text, tbCode.Text, tbYear.Text, tbEcts.Text);
             subjects.Add(subject);

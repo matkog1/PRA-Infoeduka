@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Repos
+namespace DAL.Repos.SubjectRepo
 {
     internal class SubjectRepo : IRepoSubject
     {
-        
         public Subject CreateSubject(string title, string lectureType, string code, string year, string ects)
         {
             Subject subject = new Subject
