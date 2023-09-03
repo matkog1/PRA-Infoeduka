@@ -37,20 +37,20 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            comboBox1 = new ComboBox();
+            cbLecturers = new ComboBox();
             checkedListBox1 = new CheckedListBox();
             button1 = new Button();
             button2 = new Button();
             pictureBox1 = new PictureBox();
             button3 = new Button();
             button4 = new Button();
+            tbFirstName = new TextBox();
+            tbLastName = new TextBox();
+            tbEmail = new TextBox();
+            tbAddress = new TextBox();
+            tbGsm = new TextBox();
+            tbUsername = new TextBox();
+            tbPassword = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(163, 106);
+            label2.Location = new Point(159, 104);
             label2.Name = "label2";
             label2.Size = new Size(64, 15);
             label2.TabIndex = 1;
@@ -75,7 +75,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(163, 135);
+            label3.Location = new Point(160, 133);
             label3.Name = "label3";
             label3.Size = new Size(63, 15);
             label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(163, 167);
+            label4.Location = new Point(163, 162);
             label4.Name = "label4";
             label4.Size = new Size(36, 15);
             label4.TabIndex = 3;
@@ -93,7 +93,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(163, 197);
+            label5.Location = new Point(163, 191);
             label5.Name = "label5";
             label5.Size = new Size(49, 15);
             label5.TabIndex = 4;
@@ -102,7 +102,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(163, 226);
+            label6.Location = new Point(163, 220);
             label6.Name = "label6";
             label6.Size = new Size(32, 15);
             label6.TabIndex = 5;
@@ -111,7 +111,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(163, 253);
+            label7.Location = new Point(163, 249);
             label7.Name = "label7";
             label7.Size = new Size(60, 15);
             label7.TabIndex = 6;
@@ -120,7 +120,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(163, 283);
+            label8.Location = new Point(166, 278);
             label8.Name = "label8";
             label8.Size = new Size(57, 15);
             label8.TabIndex = 7;
@@ -135,69 +135,13 @@
             label9.TabIndex = 8;
             label9.Text = "Subjects";
             // 
-            // textBox1
+            // cbLecturers
             // 
-            textBox1.Location = new Point(258, 250);
-            textBox1.Margin = new Padding(10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(187, 23);
-            textBox1.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(258, 223);
-            textBox3.Margin = new Padding(10);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(187, 23);
-            textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(258, 194);
-            textBox4.Margin = new Padding(10);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(187, 23);
-            textBox4.TabIndex = 13;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(258, 164);
-            textBox5.Margin = new Padding(10);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(187, 23);
-            textBox5.TabIndex = 14;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(258, 132);
-            textBox6.Margin = new Padding(10);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(187, 23);
-            textBox6.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(258, 98);
-            textBox7.Margin = new Padding(10);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(187, 23);
-            textBox7.TabIndex = 16;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(258, 280);
-            textBox8.Margin = new Padding(10);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(187, 23);
-            textBox8.TabIndex = 17;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(258, 67);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(187, 23);
-            comboBox1.TabIndex = 18;
+            cbLecturers.FormattingEnabled = true;
+            cbLecturers.Location = new Point(258, 67);
+            cbLecturers.Name = "cbLecturers";
+            cbLecturers.Size = new Size(187, 23);
+            cbLecturers.TabIndex = 18;
             // 
             // checkedListBox1
             // 
@@ -224,6 +168,7 @@
             button2.TabIndex = 21;
             button2.Text = "Confirm";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // pictureBox1
             // 
@@ -251,25 +196,74 @@
             button4.Text = "Confirm";
             button4.UseVisualStyleBackColor = true;
             // 
+            // tbFirstName
+            // 
+            tbFirstName.Location = new Point(258, 96);
+            tbFirstName.Name = "tbFirstName";
+            tbFirstName.Size = new Size(187, 23);
+            tbFirstName.TabIndex = 25;
+            // 
+            // tbLastName
+            // 
+            tbLastName.Location = new Point(258, 125);
+            tbLastName.Name = "tbLastName";
+            tbLastName.Size = new Size(187, 23);
+            tbLastName.TabIndex = 26;
+            // 
+            // tbEmail
+            // 
+            tbEmail.Location = new Point(258, 154);
+            tbEmail.Name = "tbEmail";
+            tbEmail.Size = new Size(187, 23);
+            tbEmail.TabIndex = 27;
+            // 
+            // tbAddress
+            // 
+            tbAddress.Location = new Point(258, 183);
+            tbAddress.Name = "tbAddress";
+            tbAddress.Size = new Size(187, 23);
+            tbAddress.TabIndex = 28;
+            // 
+            // tbGsm
+            // 
+            tbGsm.Location = new Point(258, 212);
+            tbGsm.Name = "tbGsm";
+            tbGsm.Size = new Size(187, 23);
+            tbGsm.TabIndex = 29;
+            // 
+            // tbUsername
+            // 
+            tbUsername.Location = new Point(258, 241);
+            tbUsername.Name = "tbUsername";
+            tbUsername.Size = new Size(187, 23);
+            tbUsername.TabIndex = 30;
+            // 
+            // tbPassword
+            // 
+            tbPassword.Location = new Point(258, 270);
+            tbPassword.Name = "tbPassword";
+            tbPassword.Size = new Size(187, 23);
+            tbPassword.TabIndex = 31;
+            // 
             // formEditUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 676);
+            Controls.Add(tbPassword);
+            Controls.Add(tbUsername);
+            Controls.Add(tbGsm);
+            Controls.Add(tbAddress);
+            Controls.Add(tbEmail);
+            Controls.Add(tbLastName);
+            Controls.Add(tbFirstName);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(checkedListBox1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox1);
+            Controls.Add(cbLecturers);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -298,18 +292,20 @@
         private Label label8;
         private Label label9;
         private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
         private TextBox textBox8;
-        private ComboBox comboBox1;
+        private ComboBox cbLecturers;
         private CheckedListBox checkedListBox1;
         private Button button1;
         private Button button2;
         private PictureBox pictureBox1;
         private Button button3;
         private Button button4;
+        private TextBox tbFirstName;
+        private TextBox tbLastName;
+        private TextBox tbEmail;
+        private TextBox tbAddress;
+        private TextBox tbGsm;
+        private TextBox tbUsername;
+        private TextBox tbPassword;
     }
 }

@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            tbFirstName = new TextBox();
+            tbLastName = new TextBox();
+            tbEmail = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -44,72 +40,40 @@
             label7 = new Label();
             label8 = new Label();
             checkedListBox1 = new CheckedListBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnDiscard = new Button();
+            btnConfirm = new Button();
             pictureBox1 = new PictureBox();
             button3 = new Button();
             button4 = new Button();
+            tbAddress = new TextBox();
+            tbGsm = new TextBox();
+            tbUsername = new TextBox();
+            tbPassword = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // tbFirstName
             // 
-            textBox1.Location = new Point(229, 73);
-            textBox1.Margin = new Padding(10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(187, 23);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
+            tbFirstName.Location = new Point(229, 73);
+            tbFirstName.Margin = new Padding(10);
+            tbFirstName.Name = "tbFirstName";
+            tbFirstName.Size = new Size(187, 23);
+            tbFirstName.TabIndex = 8;
             // 
-            // textBox2
+            // tbLastName
             // 
-            textBox2.Location = new Point(229, 102);
-            textBox2.Margin = new Padding(10);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(187, 23);
-            textBox2.TabIndex = 9;
-            textBox2.TextChanged += textBox2_TextChanged;
+            tbLastName.Location = new Point(229, 102);
+            tbLastName.Margin = new Padding(10);
+            tbLastName.Name = "tbLastName";
+            tbLastName.Size = new Size(187, 23);
+            tbLastName.TabIndex = 9;
             // 
-            // textBox3
+            // tbEmail
             // 
-            textBox3.Location = new Point(229, 131);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(187, 23);
-            textBox3.TabIndex = 10;
-            textBox3.TextChanged += textBox3_TextChanged;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(229, 247);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(187, 23);
-            textBox5.TabIndex = 12;
-            textBox5.TextChanged += textBox5_TextChanged;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(229, 218);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(187, 23);
-            textBox6.TabIndex = 13;
-            textBox6.TextChanged += textBox6_TextChanged;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(229, 189);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(187, 23);
-            textBox7.TabIndex = 14;
-            textBox7.TextChanged += textBox7_TextChanged;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(229, 160);
-            textBox8.Margin = new Padding(10);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(187, 23);
-            textBox8.TabIndex = 15;
-            textBox8.TextChanged += textBox8_TextChanged;
+            tbEmail.Location = new Point(229, 131);
+            tbEmail.Name = "tbEmail";
+            tbEmail.Size = new Size(187, 23);
+            tbEmail.TabIndex = 10;
             // 
             // label1
             // 
@@ -191,23 +155,24 @@
             checkedListBox1.Size = new Size(187, 148);
             checkedListBox1.TabIndex = 24;
             // 
-            // button1
+            // btnDiscard
             // 
-            button1.Location = new Point(2, 650);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 25;
-            button1.Text = "Discard";
-            button1.UseVisualStyleBackColor = true;
+            btnDiscard.Location = new Point(2, 650);
+            btnDiscard.Name = "btnDiscard";
+            btnDiscard.Size = new Size(75, 23);
+            btnDiscard.TabIndex = 25;
+            btnDiscard.Text = "Discard";
+            btnDiscard.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnConfirm
             // 
-            button2.Location = new Point(888, 650);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 26;
-            button2.Text = "Confirm";
-            button2.UseVisualStyleBackColor = true;
+            btnConfirm.Location = new Point(888, 650);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(75, 23);
+            btnConfirm.TabIndex = 26;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // pictureBox1
             // 
@@ -235,16 +200,48 @@
             button4.Text = "Confirm";
             button4.UseVisualStyleBackColor = true;
             // 
+            // tbAddress
+            // 
+            tbAddress.Location = new Point(229, 160);
+            tbAddress.Name = "tbAddress";
+            tbAddress.Size = new Size(187, 23);
+            tbAddress.TabIndex = 30;
+            // 
+            // tbGsm
+            // 
+            tbGsm.Location = new Point(229, 189);
+            tbGsm.Name = "tbGsm";
+            tbGsm.Size = new Size(187, 23);
+            tbGsm.TabIndex = 31;
+            // 
+            // tbUsername
+            // 
+            tbUsername.Location = new Point(229, 218);
+            tbUsername.Name = "tbUsername";
+            tbUsername.Size = new Size(187, 23);
+            tbUsername.TabIndex = 32;
+            // 
+            // tbPassword
+            // 
+            tbPassword.Location = new Point(229, 247);
+            tbPassword.Name = "tbPassword";
+            tbPassword.Size = new Size(187, 23);
+            tbPassword.TabIndex = 33;
+            // 
             // formNewUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 676);
+            Controls.Add(tbPassword);
+            Controls.Add(tbUsername);
+            Controls.Add(tbGsm);
+            Controls.Add(tbAddress);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(pictureBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnConfirm);
+            Controls.Add(btnDiscard);
             Controls.Add(checkedListBox1);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -254,16 +251,11 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbEmail);
+            Controls.Add(tbLastName);
+            Controls.Add(tbFirstName);
             Name = "formNewUser";
             Text = "formNewUser";
-            Load += formNewUser_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -271,13 +263,9 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
+        private TextBox tbFirstName;
+        private TextBox tbLastName;
+        private TextBox tbEmail;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -287,10 +275,14 @@
         private Label label7;
         private Label label8;
         private CheckedListBox checkedListBox1;
-        private Button button1;
-        private Button button2;
+        private Button btnDiscard;
+        private Button btnConfirm;
         private PictureBox pictureBox1;
         private Button button3;
         private Button button4;
+        private TextBox tbAddress;
+        private TextBox tbGsm;
+        private TextBox tbUsername;
+        private TextBox tbPassword;
     }
 }
