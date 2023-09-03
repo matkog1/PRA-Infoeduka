@@ -32,12 +32,12 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            richTextBox1 = new RichTextBox();
-            comboBox1 = new ComboBox();
+            rtbText = new RichTextBox();
+            cbYear = new ComboBox();
             button1 = new Button();
-            button2 = new Button();
+            btnConfirm = new Button();
             dateTimePicker1 = new DateTimePicker();
+            cbPost = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -48,7 +48,6 @@
             label1.Size = new Size(29, 15);
             label1.TabIndex = 0;
             label1.Text = "Title";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -77,28 +76,21 @@
             label4.TabIndex = 3;
             label4.Text = "Text";
             // 
-            // textBox1
+            // rtbText
             // 
-            textBox1.Location = new Point(211, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(661, 23);
-            textBox1.TabIndex = 4;
+            rtbText.Location = new Point(209, 248);
+            rtbText.Name = "rtbText";
+            rtbText.Size = new Size(664, 340);
+            rtbText.TabIndex = 8;
+            rtbText.Text = "";
             // 
-            // richTextBox1
+            // cbYear
             // 
-            richTextBox1.Location = new Point(209, 248);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(664, 340);
-            richTextBox1.TabIndex = 8;
-            richTextBox1.Text = "";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(211, 148);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 9;
+            cbYear.FormattingEnabled = true;
+            cbYear.Location = new Point(211, 148);
+            cbYear.Name = "cbYear";
+            cbYear.Size = new Size(121, 23);
+            cbYear.TabIndex = 9;
             // 
             // button1
             // 
@@ -109,14 +101,15 @@
             button1.Text = "Discard";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnConfirm
             // 
-            button2.Location = new Point(889, 650);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 11;
-            button2.Text = "Confirm";
-            button2.UseVisualStyleBackColor = true;
+            btnConfirm.Location = new Point(889, 650);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(75, 23);
+            btnConfirm.TabIndex = 11;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // dateTimePicker1
             // 
@@ -125,17 +118,25 @@
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 12;
             // 
+            // cbPost
+            // 
+            cbPost.FormattingEnabled = true;
+            cbPost.Location = new Point(211, 110);
+            cbPost.Name = "cbPost";
+            cbPost.Size = new Size(662, 23);
+            cbPost.TabIndex = 13;
+            // 
             // formEditPost
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 676);
+            Controls.Add(cbPost);
             Controls.Add(dateTimePicker1);
-            Controls.Add(button2);
+            Controls.Add(btnConfirm);
             Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(richTextBox1);
-            Controls.Add(textBox1);
+            Controls.Add(cbYear);
+            Controls.Add(rtbText);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -152,11 +153,11 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private RichTextBox richTextBox1;
-        private ComboBox comboBox1;
+        private RichTextBox rtbText;
+        private ComboBox cbYear;
         private Button button1;
-        private Button button2;
+        private Button btnConfirm;
         private DateTimePicker dateTimePicker1;
+        private ComboBox cbPost;
     }
 }
