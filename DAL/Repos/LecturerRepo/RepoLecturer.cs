@@ -57,6 +57,7 @@ namespace DAL.Repos.LecturerRepo
 
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
+
                     foreach (Lecturer lecturer in lecturers)
                     {
                         writer.WriteLine(lecturer.ToString());
@@ -65,7 +66,6 @@ namespace DAL.Repos.LecturerRepo
             }
             else
             {
-
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
                     foreach (Lecturer lecturer in lecturers)
