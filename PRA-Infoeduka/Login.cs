@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL.Models;
+using DAL.Repos.LecturerRepo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace PRA_Infoeduka
 {
     public partial class Login : Form
     {
+        IRepoLecturer repoLecturer;
+
         public Login()
         {
             InitializeComponent();
+            repoLecturer = LecturerFactory.GetRepo();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -24,22 +29,36 @@ namespace PRA_Infoeduka
 
         private void LoginUser()
         {
+            List<Lecturer> lecturers = repoLecturer.LoadLecturerFromFile();
             string username = textBoxUserName.Text;
             string password = textBoxPassword.Text;
 
-            if (username == "admin" && password == "admin")
-            {
-                AdminDashboard adminDashboard = new AdminDashboard();
-                adminDashboard.Show();
-                this.Hide();
+            // Hardkodiran admin za demo
+            string adminUsername = "admin";
+            string adminPassword = "admin";  
 
-            }
-            else if (username == "user" && password == "user")
+            if ((username == adminUsername && password == adminPassword) ||
+                (lecturers != null && lecturers.Any(lecturer => lecturer.UserName == username && lecturer.Password == password)))
             {
-                UserDashboard userDashboard = new UserDashboard();
-                userDashboard.Show();
-                this.Hide();
+                if (username == adminUsername)
+                {
+                    AdminDashboard adminDashboard = new AdminDashboard();
+                    adminDashboard.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    UserDashboard userDashboard = new UserDashboard();
+                    userDashboard.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Authentication Failed",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
