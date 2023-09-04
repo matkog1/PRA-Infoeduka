@@ -20,18 +20,18 @@ namespace PRA_Infoeduka
 
         private void LoadSettings()
         {
-            panelPosts.Visible = false;
+            pnlPostsMenu.Visible = false;
         }
 
         private void ShowPostsPanel()
         {
-            if (panelPosts.Visible)
+            if (pnlPostsMenu.Visible)
             {
-                panelPosts.Visible = false;
+                pnlPostsMenu.Visible = false;
             }
             else
             {
-                panelPosts.Visible = true;
+                pnlPostsMenu.Visible = true;
             }
         }
 
@@ -40,6 +40,36 @@ namespace PRA_Infoeduka
             formNewPost formNewPost = new formNewPost();
             LoadForm(formNewPost);
         }
+
+        private void btnPosts_Click(object sender, EventArgs e)
+        {
+            ShowPostsPanel();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            formEditUser formEditUser = new formEditUser();
+            LoadForm(formEditUser);
+        }
+
+        private void btnSubjects_Click(object sender, EventArgs e)
+        {
+            formUserSubjects formUserSubjects = new formUserSubjects();
+            LoadForm(formUserSubjects);
+        }
+
+        private void btnNewsFeed_Click(object sender, EventArgs e)
+        {
+            formNewsFeedPostsAll formNewsFeedPostsAll = new formNewsFeedPostsAll();
+            LoadForm(formNewsFeedPostsAll);
+        }
+
+        private void btnEditPost_Click_1(object sender, EventArgs e)
+        {
+            formEditPost formEditPost = new formEditPost();
+            LoadForm(formEditPost);
+        }
+
 
         private void LoadForm(Form form)
         {
@@ -55,29 +85,6 @@ namespace PRA_Infoeduka
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             return form;
-        }
-
-        private void btnEditPost_Click(object sender, EventArgs e)
-        {
-            formEditPost formEditPost = new formEditPost();
-            LoadForm(formEditPost);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ShowPostsPanel();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            formEditUser formEditUser = new formEditUser();
-            LoadForm(formEditUser);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            formUserSubjects formUserSubjects = new formUserSubjects();
-            LoadForm(formUserSubjects);
         }
     }
 }

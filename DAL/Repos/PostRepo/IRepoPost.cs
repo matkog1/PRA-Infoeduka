@@ -9,6 +9,9 @@ namespace DAL.Repos.PostRepo
 {
     public interface IRepoPost
     {
-        public Post CreatePost(string title, string year, DateTime date, string text);
+        public Post CreatePost(string title, string year, DateTime valid, string text);
+
+        public void WritePostToFile(List<Post> posts);
+        public List<Post> LoadPostsFromFile();
     }
 }

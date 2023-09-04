@@ -24,8 +24,8 @@ namespace PRA_Infoeduka
 
         private void LoginUser()
         {
-           string username = textBoxUserName.Text;
-           string password = textBoxPassword.Text;
+            string username = textBoxUserName.Text;
+            string password = textBoxPassword.Text;
 
             if (username == "admin" && password == "admin")
             {

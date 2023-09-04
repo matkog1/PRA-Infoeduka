@@ -30,13 +30,12 @@
         {
             label1 = new Label();
             flpPosts = new FlowLayoutPanel();
-            fsdfsd = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(119, 51);
+            label1.Location = new Point(24, 51);
             label1.Name = "label1";
             label1.Size = new Size(35, 15);
             label1.TabIndex = 0;
@@ -44,26 +43,19 @@
             // 
             // flpPosts
             // 
-            flpPosts.Location = new Point(123, 82);
+            flpPosts.AutoScroll = true;
+            flpPosts.BackColor = Color.DarkSlateGray;
+            flpPosts.ForeColor = SystemColors.ControlLightLight;
+            flpPosts.Location = new Point(24, 82);
             flpPosts.Name = "flpPosts";
-            flpPosts.Size = new Size(784, 506);
+            flpPosts.Size = new Size(929, 582);
             flpPosts.TabIndex = 1;
-            // 
-            // fsdfsd
-            // 
-            fsdfsd.AutoSize = true;
-            fsdfsd.Location = new Point(229, 44);
-            fsdfsd.Name = "fsdfsd";
-            fsdfsd.Size = new Size(271, 15);
-            fsdfsd.TabIndex = 2;
-            fsdfsd.Text = "Tu idu postovi kao usercontrole u flowlayoutpanel";
             // 
             // formNewsFeedPostsAll
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(965, 676);
-            Controls.Add(fsdfsd);
             Controls.Add(flpPosts);
             Controls.Add(label1);
             Name = "formNewsFeedPostsAll";
@@ -76,6 +68,5 @@
 
         private Label label1;
         private FlowLayoutPanel flpPosts;
-        private Label fsdfsd;
     }
 }

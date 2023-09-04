@@ -9,6 +9,6 @@ namespace DAL.Repos.PostRepo
 {
     public static class PostFactory
     {
-        public static IRepoPost GetRepo() => new PostRepo();
+        public static IRepoPost GetRepo() => new RepoPost();
     }
 }
