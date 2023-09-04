@@ -29,29 +29,39 @@
         private void InitializeComponent()
         {
             pnlSideMenu = new Panel();
-            button5 = new Button();
+            pnlUser = new Panel();
+            btnUser = new Button();
+            pnlSubjects = new Panel();
+            btnSubjects = new Button();
+            pnlPostsMenu = new Panel();
+            btnNewPost = new Button();
+            btnEditPost = new Button();
+            pnlPosts = new Panel();
+            btnPosts = new Button();
+            pnlNewsFeed = new Panel();
+            btnNewsFeed = new Button();
             pnlBottom = new Panel();
             button2 = new Button();
-            panelPosts = new Panel();
-            btnEditPost = new Button();
-            btnNewPost = new Button();
-            button1 = new Button();
             pnlTop = new Panel();
-            button3 = new Button();
             panelMainShow = new Panel();
             pnlSideMenu.SuspendLayout();
+            pnlUser.SuspendLayout();
+            pnlSubjects.SuspendLayout();
+            pnlPostsMenu.SuspendLayout();
+            pnlPosts.SuspendLayout();
+            pnlNewsFeed.SuspendLayout();
             pnlBottom.SuspendLayout();
-            panelPosts.SuspendLayout();
-            pnlTop.SuspendLayout();
             SuspendLayout();
             // 
             // pnlSideMenu
             // 
             pnlSideMenu.BackColor = Color.DarkSlateGray;
-            pnlSideMenu.Controls.Add(button5);
+            pnlSideMenu.Controls.Add(pnlUser);
+            pnlSideMenu.Controls.Add(pnlSubjects);
+            pnlSideMenu.Controls.Add(pnlPostsMenu);
+            pnlSideMenu.Controls.Add(pnlPosts);
+            pnlSideMenu.Controls.Add(pnlNewsFeed);
             pnlSideMenu.Controls.Add(pnlBottom);
-            pnlSideMenu.Controls.Add(panelPosts);
-            pnlSideMenu.Controls.Add(button1);
             pnlSideMenu.Controls.Add(pnlTop);
             pnlSideMenu.Dock = DockStyle.Left;
             pnlSideMenu.Location = new Point(0, 0);
@@ -59,17 +69,125 @@
             pnlSideMenu.Size = new Size(203, 681);
             pnlSideMenu.TabIndex = 0;
             // 
-            // button5
+            // pnlUser
             // 
-            button5.Dock = DockStyle.Top;
-            button5.Location = new Point(0, 195);
-            button5.Name = "button5";
-            button5.Size = new Size(203, 35);
-            button5.TabIndex = 5;
-            button5.Text = "Subjects";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            pnlUser.Controls.Add(btnUser);
+            pnlUser.Dock = DockStyle.Top;
+            pnlUser.Location = new Point(0, 268);
+            pnlUser.Name = "pnlUser";
+            pnlUser.Size = new Size(203, 37);
+            pnlUser.TabIndex = 9;
+            // 
+            // btnUser
+            // 
+            btnUser.Dock = DockStyle.Top;
+            btnUser.Location = new Point(0, 0);
+            btnUser.Name = "btnUser";
+            btnUser.Size = new Size(203, 35);
+            btnUser.TabIndex = 0;
+            btnUser.Text = "User";
+            btnUser.TextAlign = ContentAlignment.MiddleLeft;
+            btnUser.UseVisualStyleBackColor = true;
+            btnUser.Click += button3_Click;
+            // 
+            // pnlSubjects
+            // 
+            pnlSubjects.Controls.Add(btnSubjects);
+            pnlSubjects.Dock = DockStyle.Top;
+            pnlSubjects.Location = new Point(0, 231);
+            pnlSubjects.Name = "pnlSubjects";
+            pnlSubjects.Size = new Size(203, 37);
+            pnlSubjects.TabIndex = 8;
+            // 
+            // btnSubjects
+            // 
+            btnSubjects.Dock = DockStyle.Top;
+            btnSubjects.Location = new Point(0, 0);
+            btnSubjects.Name = "btnSubjects";
+            btnSubjects.Size = new Size(203, 35);
+            btnSubjects.TabIndex = 5;
+            btnSubjects.Text = "Subjects";
+            btnSubjects.TextAlign = ContentAlignment.MiddleLeft;
+            btnSubjects.UseVisualStyleBackColor = true;
+            btnSubjects.Click += button5_Click;
+            // 
+            // pnlPostsMenu
+            // 
+            pnlPostsMenu.Controls.Add(btnNewPost);
+            pnlPostsMenu.Controls.Add(btnEditPost);
+            pnlPostsMenu.Dock = DockStyle.Top;
+            pnlPostsMenu.Location = new Point(0, 172);
+            pnlPostsMenu.Name = "pnlPostsMenu";
+            pnlPostsMenu.Size = new Size(203, 59);
+            pnlPostsMenu.TabIndex = 7;
+            // 
+            // btnNewPost
+            // 
+            btnNewPost.Dock = DockStyle.Top;
+            btnNewPost.FlatStyle = FlatStyle.Flat;
+            btnNewPost.ForeColor = Color.White;
+            btnNewPost.Location = new Point(0, 30);
+            btnNewPost.Name = "btnNewPost";
+            btnNewPost.Size = new Size(203, 29);
+            btnNewPost.TabIndex = 2;
+            btnNewPost.Text = "New Post";
+            btnNewPost.UseVisualStyleBackColor = true;
+            btnNewPost.Click += btnNewPost_Click;
+            // 
+            // btnEditPost
+            // 
+            btnEditPost.Dock = DockStyle.Top;
+            btnEditPost.FlatStyle = FlatStyle.Flat;
+            btnEditPost.ForeColor = Color.White;
+            btnEditPost.Location = new Point(0, 0);
+            btnEditPost.Name = "btnEditPost";
+            btnEditPost.Size = new Size(203, 30);
+            btnEditPost.TabIndex = 3;
+            btnEditPost.Text = "Edit Post";
+            btnEditPost.UseVisualStyleBackColor = true;
+            btnEditPost.Click += btnEditPost_Click;
+            // 
+            // pnlPosts
+            // 
+            pnlPosts.Controls.Add(btnPosts);
+            pnlPosts.Dock = DockStyle.Top;
+            pnlPosts.Location = new Point(0, 136);
+            pnlPosts.Name = "pnlPosts";
+            pnlPosts.Size = new Size(203, 36);
+            pnlPosts.TabIndex = 6;
+            // 
+            // btnPosts
+            // 
+            btnPosts.Dock = DockStyle.Top;
+            btnPosts.Location = new Point(0, 0);
+            btnPosts.Name = "btnPosts";
+            btnPosts.Size = new Size(203, 35);
+            btnPosts.TabIndex = 1;
+            btnPosts.Text = "Posts";
+            btnPosts.TextAlign = ContentAlignment.MiddleLeft;
+            btnPosts.UseVisualStyleBackColor = true;
+            btnPosts.Click += button1_Click;
+            // 
+            // pnlNewsFeed
+            // 
+            pnlNewsFeed.Controls.Add(btnNewsFeed);
+            pnlNewsFeed.Dock = DockStyle.Top;
+            pnlNewsFeed.Location = new Point(0, 100);
+            pnlNewsFeed.Name = "pnlNewsFeed";
+            pnlNewsFeed.Size = new Size(203, 36);
+            pnlNewsFeed.TabIndex = 4;
+            // 
+            // btnNewsFeed
+            // 
+            btnNewsFeed.Dock = DockStyle.Top;
+            btnNewsFeed.Location = new Point(0, 0);
+            btnNewsFeed.Name = "btnNewsFeed";
+            btnNewsFeed.Size = new Size(203, 36);
+            btnNewsFeed.TabIndex = 6;
+            btnNewsFeed.Text = "News Feed";
+            btnNewsFeed.TextAlign = ContentAlignment.MiddleLeft;
+            btnNewsFeed.UseVisualStyleBackColor = true;
+            btnNewsFeed.Click += button4_Click;
             // 
             // pnlBottom
             // 
@@ -90,73 +208,13 @@
             button2.Text = "Help";
             button2.UseVisualStyleBackColor = true;
             // 
-            // panelPosts
-            // 
-            panelPosts.Controls.Add(btnEditPost);
-            panelPosts.Controls.Add(btnNewPost);
-            panelPosts.Dock = DockStyle.Top;
-            panelPosts.Location = new Point(0, 135);
-            panelPosts.Name = "panelPosts";
-            panelPosts.Size = new Size(203, 60);
-            panelPosts.TabIndex = 2;
-            // 
-            // btnEditPost
-            // 
-            btnEditPost.Dock = DockStyle.Top;
-            btnEditPost.FlatStyle = FlatStyle.Flat;
-            btnEditPost.ForeColor = Color.White;
-            btnEditPost.Location = new Point(0, 30);
-            btnEditPost.Name = "btnEditPost";
-            btnEditPost.Size = new Size(203, 30);
-            btnEditPost.TabIndex = 3;
-            btnEditPost.Text = "Edit Post";
-            btnEditPost.UseVisualStyleBackColor = true;
-            btnEditPost.Click += btnEditPost_Click;
-            // 
-            // btnNewPost
-            // 
-            btnNewPost.Dock = DockStyle.Top;
-            btnNewPost.FlatStyle = FlatStyle.Flat;
-            btnNewPost.ForeColor = Color.White;
-            btnNewPost.Location = new Point(0, 0);
-            btnNewPost.Name = "btnNewPost";
-            btnNewPost.Size = new Size(203, 30);
-            btnNewPost.TabIndex = 2;
-            btnNewPost.Text = "New Post";
-            btnNewPost.UseVisualStyleBackColor = true;
-            btnNewPost.Click += btnNewPost_Click;
-            // 
-            // button1
-            // 
-            button1.Dock = DockStyle.Top;
-            button1.Location = new Point(0, 100);
-            button1.Name = "button1";
-            button1.Size = new Size(203, 35);
-            button1.TabIndex = 1;
-            button1.Text = "Posts";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // pnlTop
             // 
-            pnlTop.Controls.Add(button3);
             pnlTop.Dock = DockStyle.Top;
             pnlTop.Location = new Point(0, 0);
             pnlTop.Name = "pnlTop";
             pnlTop.Size = new Size(203, 100);
             pnlTop.TabIndex = 0;
-            // 
-            // button3
-            // 
-            button3.Dock = DockStyle.Bottom;
-            button3.Location = new Point(0, 65);
-            button3.Name = "button3";
-            button3.Size = new Size(203, 35);
-            button3.TabIndex = 0;
-            button3.Text = "User";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // panelMainShow
             // 
@@ -176,9 +234,12 @@
             Name = "UserDashboard";
             Text = "UserDashboard";
             pnlSideMenu.ResumeLayout(false);
+            pnlUser.ResumeLayout(false);
+            pnlSubjects.ResumeLayout(false);
+            pnlPostsMenu.ResumeLayout(false);
+            pnlPosts.ResumeLayout(false);
+            pnlNewsFeed.ResumeLayout(false);
             pnlBottom.ResumeLayout(false);
-            panelPosts.ResumeLayout(false);
-            pnlTop.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -187,13 +248,18 @@
         private Panel pnlSideMenu;
         private Panel pnlTop;
         private Panel panelMainShow;
-        private Button button1;
-        private Panel panelPosts;
+        private Button btnPosts;
         private Button btnEditPost;
         private Button btnNewPost;
         private Panel pnlBottom;
         private Button button2;
-        private Button button5;
-        private Button button3;
+        private Button btnSubjects;
+        private Button btnUser;
+        private Button btnNewsFeed;
+        private Panel pnlPosts;
+        private Panel pnlNewsFeed;
+        private Panel pnlPostsMenu;
+        private Panel pnlUser;
+        private Panel pnlSubjects;
     }
 }
