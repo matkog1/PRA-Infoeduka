@@ -92,5 +92,10 @@ namespace PRA_Infoeduka
                 }
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

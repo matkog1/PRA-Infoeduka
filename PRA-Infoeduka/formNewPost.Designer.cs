@@ -28,123 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            tbTitle = new TextBox();
-            cbYear = new ComboBox();
-            datePicker = new DateTimePicker();
-            label4 = new Label();
-            rtbText = new RichTextBox();
-            btnDiscard = new Button();
-            btnConfirm = new Button();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbTitle = new System.Windows.Forms.TextBox();
+            this.cbYear = new System.Windows.Forms.ComboBox();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rtbText = new System.Windows.Forms.RichTextBox();
+            this.btnDiscard = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(151, 113);
-            label1.Name = "label1";
-            label1.Size = new Size(29, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Title";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(151, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Title";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(151, 156);
-            label2.Name = "label2";
-            label2.Size = new Size(29, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Year";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(151, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Year";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(151, 196);
-            label3.Name = "label3";
-            label3.Size = new Size(32, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Valid";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(151, 196);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Valid";
             // 
             // tbTitle
             // 
-            tbTitle.Location = new Point(211, 105);
-            tbTitle.Name = "tbTitle";
-            tbTitle.Size = new Size(661, 23);
-            tbTitle.TabIndex = 3;
+            this.tbTitle.Location = new System.Drawing.Point(211, 105);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(661, 23);
+            this.tbTitle.TabIndex = 3;
             // 
             // cbYear
             // 
-            cbYear.FormattingEnabled = true;
-            cbYear.Location = new Point(211, 148);
-            cbYear.Name = "cbYear";
-            cbYear.Size = new Size(121, 23);
-            cbYear.TabIndex = 4;
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Location = new System.Drawing.Point(211, 148);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(121, 23);
+            this.cbYear.TabIndex = 4;
             // 
             // datePicker
             // 
-            datePicker.Location = new Point(211, 190);
-            datePicker.Name = "datePicker";
-            datePicker.Size = new Size(200, 23);
-            datePicker.TabIndex = 5;
-            datePicker.ValueChanged += datePicker_ValueChanged;
+            this.datePicker.Location = new System.Drawing.Point(211, 190);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(200, 23);
+            this.datePicker.TabIndex = 5;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(151, 248);
-            label4.Name = "label4";
-            label4.Size = new Size(28, 15);
-            label4.TabIndex = 6;
-            label4.Text = "Text";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(151, 248);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 15);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Text";
             // 
             // rtbText
             // 
-            rtbText.Location = new Point(209, 248);
-            rtbText.Name = "rtbText";
-            rtbText.Size = new Size(664, 340);
-            rtbText.TabIndex = 7;
-            rtbText.Text = "";
+            this.rtbText.Location = new System.Drawing.Point(209, 248);
+            this.rtbText.Name = "rtbText";
+            this.rtbText.Size = new System.Drawing.Size(664, 340);
+            this.rtbText.TabIndex = 7;
+            this.rtbText.Text = "";
             // 
             // btnDiscard
             // 
-            btnDiscard.Location = new Point(1, 651);
-            btnDiscard.Name = "btnDiscard";
-            btnDiscard.Size = new Size(75, 23);
-            btnDiscard.TabIndex = 8;
-            btnDiscard.Text = "Discard";
-            btnDiscard.UseVisualStyleBackColor = true;
+            this.btnDiscard.Location = new System.Drawing.Point(1, 651);
+            this.btnDiscard.Name = "btnDiscard";
+            this.btnDiscard.Size = new System.Drawing.Size(75, 23);
+            this.btnDiscard.TabIndex = 8;
+            this.btnDiscard.Text = "Discard";
+            this.btnDiscard.UseVisualStyleBackColor = true;
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(889, 651);
-            btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new Size(75, 23);
-            btnConfirm.TabIndex = 9;
-            btnConfirm.Text = "Confirm";
-            btnConfirm.UseVisualStyleBackColor = true;
-            btnConfirm.Click += btnConfirm_Click;
+            this.btnConfirm.Location = new System.Drawing.Point(889, 651);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.TabIndex = 9;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
             // 
             // formNewPost
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(965, 676);
-            Controls.Add(btnConfirm);
-            Controls.Add(btnDiscard);
-            Controls.Add(rtbText);
-            Controls.Add(label4);
-            Controls.Add(datePicker);
-            Controls.Add(cbYear);
-            Controls.Add(tbTitle);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "formNewPost";
-            Text = "formNewPost";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(965, 676);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnDiscard);
+            this.Controls.Add(this.rtbText);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.datePicker);
+            this.Controls.Add(this.cbYear);
+            this.Controls.Add(this.tbTitle);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "formNewPost";
+            this.Text = "formNewPost";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
