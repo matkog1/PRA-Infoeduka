@@ -81,7 +81,7 @@
             rtbText.Location = new Point(209, 248);
             rtbText.Name = "rtbText";
             rtbText.Size = new Size(664, 340);
-            rtbText.TabIndex = 8;
+            rtbText.TabIndex = 4;
             rtbText.Text = "";
             // 
             // cbYear
@@ -90,7 +90,7 @@
             cbYear.Location = new Point(211, 148);
             cbYear.Name = "cbYear";
             cbYear.Size = new Size(121, 23);
-            cbYear.TabIndex = 9;
+            cbYear.TabIndex = 2;
             // 
             // button1
             // 
@@ -116,7 +116,7 @@
             dateTimePicker1.Location = new Point(211, 190);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 12;
+            dateTimePicker1.TabIndex = 3;
             // 
             // cbPost
             // 
@@ -124,7 +124,7 @@
             cbPost.Location = new Point(211, 110);
             cbPost.Name = "cbPost";
             cbPost.Size = new Size(662, 23);
-            cbPost.TabIndex = 13;
+            cbPost.TabIndex = 1;
             // 
             // formEditPost
             // 

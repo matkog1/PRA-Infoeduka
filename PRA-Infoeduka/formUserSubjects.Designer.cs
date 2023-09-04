@@ -69,7 +69,7 @@
             comboBox1.Location = new Point(322, 87);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(248, 23);
-            comboBox1.TabIndex = 3;
+            comboBox1.TabIndex = 1;
             // 
             // comboBox2
             // 
@@ -77,7 +77,7 @@
             comboBox2.Location = new Point(322, 128);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(248, 23);
-            comboBox2.TabIndex = 4;
+            comboBox2.TabIndex = 2;
             // 
             // listBox1
             // 

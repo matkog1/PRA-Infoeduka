@@ -35,7 +35,7 @@ namespace PRA_Infoeduka
 
             // Hardkodiran admin za demo
             string adminUsername = "admin";
-            string adminPassword = "admin";  
+            string adminPassword = "admin";
 
             if ((username == adminUsername && password == adminPassword) ||
                 (lecturers != null && lecturers.Any(lecturer => lecturer.UserName == username && lecturer.Password == password)))

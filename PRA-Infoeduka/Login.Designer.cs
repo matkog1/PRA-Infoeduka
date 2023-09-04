@@ -58,21 +58,21 @@
             textBoxUserName.Location = new Point(440, 174);
             textBoxUserName.Name = "textBoxUserName";
             textBoxUserName.Size = new Size(243, 23);
-            textBoxUserName.TabIndex = 2;
+            textBoxUserName.TabIndex = 1;
             // 
             // textBoxPassword
             // 
             textBoxPassword.Location = new Point(440, 210);
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.Size = new Size(243, 23);
-            textBoxPassword.TabIndex = 3;
+            textBoxPassword.TabIndex = 2;
             // 
             // btnLogin
             // 
             btnLogin.Location = new Point(440, 251);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(243, 23);
-            btnLogin.TabIndex = 4;
+            btnLogin.TabIndex = 3;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;

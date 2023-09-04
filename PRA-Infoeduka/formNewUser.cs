@@ -31,7 +31,7 @@ namespace PRA_Infoeduka
         private void LoadSubjectsToCheckBoxListView()
         {
             subjects = repoSubject.LoadSubjectsFromFile();
-            checkedListBox1.Items.Clear(); 
+            checkedListBox1.Items.Clear();
 
             foreach (var subject in subjects)
             {

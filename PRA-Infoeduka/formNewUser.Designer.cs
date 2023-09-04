@@ -58,7 +58,7 @@
             tbFirstName.Margin = new Padding(10);
             tbFirstName.Name = "tbFirstName";
             tbFirstName.Size = new Size(187, 23);
-            tbFirstName.TabIndex = 8;
+            tbFirstName.TabIndex = 1;
             // 
             // tbLastName
             // 
@@ -66,14 +66,14 @@
             tbLastName.Margin = new Padding(10);
             tbLastName.Name = "tbLastName";
             tbLastName.Size = new Size(187, 23);
-            tbLastName.TabIndex = 9;
+            tbLastName.TabIndex = 2;
             // 
             // tbEmail
             // 
             tbEmail.Location = new Point(229, 131);
             tbEmail.Name = "tbEmail";
             tbEmail.Size = new Size(187, 23);
-            tbEmail.TabIndex = 10;
+            tbEmail.TabIndex = 3;
             // 
             // label1
             // 
@@ -205,28 +205,28 @@
             tbAddress.Location = new Point(229, 160);
             tbAddress.Name = "tbAddress";
             tbAddress.Size = new Size(187, 23);
-            tbAddress.TabIndex = 30;
+            tbAddress.TabIndex = 4;
             // 
             // tbGsm
             // 
             tbGsm.Location = new Point(229, 189);
             tbGsm.Name = "tbGsm";
             tbGsm.Size = new Size(187, 23);
-            tbGsm.TabIndex = 31;
+            tbGsm.TabIndex = 5;
             // 
             // tbUsername
             // 
             tbUsername.Location = new Point(229, 218);
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(187, 23);
-            tbUsername.TabIndex = 32;
+            tbUsername.TabIndex = 6;
             // 
             // tbPassword
             // 
             tbPassword.Location = new Point(229, 247);
             tbPassword.Name = "tbPassword";
             tbPassword.Size = new Size(187, 23);
-            tbPassword.TabIndex = 33;
+            tbPassword.TabIndex = 7;
             // 
             // formNewUser
             // 

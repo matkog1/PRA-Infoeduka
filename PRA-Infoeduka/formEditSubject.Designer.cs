@@ -96,35 +96,35 @@
             tbTitle.Location = new Point(320, 121);
             tbTitle.Name = "tbTitle";
             tbTitle.Size = new Size(270, 23);
-            tbTitle.TabIndex = 5;
+            tbTitle.TabIndex = 2;
             // 
             // tbEcts
             // 
             tbEcts.Location = new Point(320, 187);
             tbEcts.Name = "tbEcts";
             tbEcts.Size = new Size(270, 23);
-            tbEcts.TabIndex = 6;
+            tbEcts.TabIndex = 4;
             // 
             // tbYear
             // 
             tbYear.Location = new Point(320, 220);
             tbYear.Name = "tbYear";
             tbYear.Size = new Size(270, 23);
-            tbYear.TabIndex = 7;
+            tbYear.TabIndex = 5;
             // 
             // tbCode
             // 
             tbCode.Location = new Point(320, 257);
             tbCode.Name = "tbCode";
             tbCode.Size = new Size(270, 23);
-            tbCode.TabIndex = 8;
+            tbCode.TabIndex = 6;
             // 
             // tbLectureType
             // 
             tbLectureType.Location = new Point(320, 153);
             tbLectureType.Name = "tbLectureType";
             tbLectureType.Size = new Size(270, 23);
-            tbLectureType.TabIndex = 9;
+            tbLectureType.TabIndex = 3;
             // 
             // label6
             // 
@@ -140,16 +140,16 @@
             listView1.Location = new Point(320, 295);
             listView1.Name = "listView1";
             listView1.Size = new Size(270, 124);
-            listView1.TabIndex = 11;
+            listView1.TabIndex = 7;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(320, 445);
+            button1.Location = new Point(320, 436);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 12;
+            button1.TabIndex = 8;
             button1.Text = "Discard";
             button1.UseVisualStyleBackColor = true;
             // 
@@ -158,7 +158,7 @@
             button2.Location = new Point(515, 436);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
-            button2.TabIndex = 13;
+            button2.TabIndex = 9;
             button2.Text = "Confirm";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -178,7 +178,7 @@
             cbSubjects.Location = new Point(320, 82);
             cbSubjects.Name = "cbSubjects";
             cbSubjects.Size = new Size(270, 23);
-            cbSubjects.TabIndex = 15;
+            cbSubjects.TabIndex = 1;
             // 
             // formEditSubject
             // 
