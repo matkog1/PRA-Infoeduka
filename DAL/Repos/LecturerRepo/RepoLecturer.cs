@@ -16,7 +16,6 @@ namespace DAL.Repos.LecturerRepo
 
         public List<Lecturer> LoadLecturerFromFile()
         {
-            
             List<Lecturer> lecturers = new List<Lecturer>();
 
             string startupPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -30,9 +29,17 @@ namespace DAL.Repos.LecturerRepo
                     while ((line = reader.ReadLine()) != null)
                     {
                         string[] elements = line.Split(',');
-                        if (elements.Length >= 5)
+                        if (elements.Length >= 7) 
                         {
-                            Lecturer lecturer = new Lecturer(elements[0], elements[1], elements[2], elements[3], elements[4], elements[5], elements[6]);
+                            Lecturer lecturer = new Lecturer(elements[0].Trim(), elements[1].Trim(), elements[2].Trim(), elements[3].Trim(), elements[4].Trim(), elements[5].Trim(), elements[6].Trim());
+
+                            if (elements.Length > 7)
+                            {
+                                string[] subjectTitles = elements[7].Split(';');
+                                List<Subject> subjects = subjectTitles.Select(title => new Subject { Title = title.Trim() }).ToList();
+                                lecturer.Subjects = subjects;
+                            }
+
                             lecturers.Add(lecturer);
                         }
                     }
@@ -41,6 +48,7 @@ namespace DAL.Repos.LecturerRepo
 
             return lecturers;
         }
+
 
         public void WriteLecturerToFile(List<Lecturer> lecturers)
         {

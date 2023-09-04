@@ -48,6 +48,7 @@ namespace PRA_Infoeduka
 
         private void cbLecturers_SelectedIndexChanged(object sender, EventArgs e)
         {
+            checkedListBox1.Items.Clear();
             // Make sure something is selected
             if (cbLecturers.SelectedIndex != -1)
             {
@@ -62,6 +63,11 @@ namespace PRA_Infoeduka
                 tbGsm.Text = selectedLecturer.GSM;
                 tbUsername.Text = selectedLecturer.UserName;
                 tbPassword.Text = selectedLecturer.Password;
+
+                foreach (Subject subject in selectedLecturer.Subjects)
+                {
+                    checkedListBox1.Items.Add(subject.Title, true);  // The 'true' sets the checkbox to be checked
+                }
             }
         }
 
@@ -70,7 +76,7 @@ namespace PRA_Infoeduka
             if (cbLecturers.SelectedIndex == -1)
             {
                 // Nothing selected
-                MessageBox.Show("Please select a subject to edit.", "No Subject Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a user to edit.", "No Subject Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -109,5 +115,6 @@ namespace PRA_Infoeduka
                 e.Value = $"{lecturer.FirstName} {lecturer.LastName}";
             }
         }
+       
     }
 }
