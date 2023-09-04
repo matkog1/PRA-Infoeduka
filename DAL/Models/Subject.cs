@@ -9,6 +9,10 @@ namespace DAL.Models
 {
     public class Subject
     {
+
+        public Subject()
+        {
+        }
         public Subject(string title, string lectureType, string code, string year, string eCTS)
         {
             Title = title;

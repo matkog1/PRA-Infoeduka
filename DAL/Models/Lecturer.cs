@@ -18,6 +18,7 @@ namespace DAL.Models
             GSM = gsm;
             UserName = userName;
             Password = password;
+            Subjects = new List<Subject>();
         }
 
         public Lecturer(string firstName, string lastName, string email, string address, string gSM, string userName, string password)
@@ -30,6 +31,7 @@ namespace DAL.Models
             GSM = gSM;
             UserName = userName;
             Password = password;
+            Subjects = new List<Subject>();
         }
         public Guid Id { get; set; }
 
@@ -46,14 +48,24 @@ namespace DAL.Models
 
         public string Password { get; set; }
 
-        public override string ToString() => $"{FirstName}, {LastName}, {Email}, {Address}, {GSM}, {UserName}, {Password}";
+        public List<Subject> Subjects { get; set; }
+
+        public override string ToString()
+        {
+            string subjectsString = string.Join(";", Subjects.Select(s => s.Title));
+            return $"{FirstName}, {LastName}, {Email}, {Address}, {GSM}, {UserName}, {Password}, {subjectsString}";
+        }
+
 
         public static Lecturer Parse(string line)
         {
             string[] parts = line.Split(',');
-            if (parts.Length < 5) return null;  // Not a valid line
+            if (parts.Length < 8) return null;  // Not a valid line
 
-            return new Lecturer(
+            string[] subjectTitles = parts[7].Split(';'); // subjects are separated by semicolon
+            List<Subject> subjects = subjectTitles.Select(title => new Subject { Title = title.Trim() }).ToList();
+
+            Lecturer lecturer = new Lecturer(
                 parts[0].Trim(),
                 parts[1].Trim(),
                 parts[2].Trim(),
@@ -62,6 +74,10 @@ namespace DAL.Models
                 parts[5].Trim(),
                 parts[6].Trim()
             );
+
+            lecturer.Subjects = subjects;
+
+            return lecturer;
         }
     }
 }

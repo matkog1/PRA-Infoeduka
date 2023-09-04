@@ -132,6 +132,7 @@
             btnNewPost.TabIndex = 2;
             btnNewPost.Text = "New Post";
             btnNewPost.UseVisualStyleBackColor = true;
+            btnNewPost.Click += btnNewPost_Click_1;
             // 
             // btnEditPost
             // 

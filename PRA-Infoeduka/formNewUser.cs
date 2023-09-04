@@ -16,25 +16,61 @@ namespace PRA_Infoeduka
     public partial class formNewUser : Form
     {
         List<Lecturer> lecturers = new List<Lecturer>();
+        List<Subject> subjects = new List<Subject>();
         IRepoLecturer repoLecturer;
+        IRepoSubject repoSubject;
         public formNewUser()
         {
             InitializeComponent();
             repoLecturer = LecturerFactory.GetRepo();
+            repoSubject = SubjectFactory.GetRepo();
+            LoadSubjectsToCheckBoxListView();
+
+        }
+
+        private void LoadSubjectsToCheckBoxListView()
+        {
+            subjects = repoSubject.LoadSubjectsFromFile();
+            checkedListBox1.Items.Clear(); 
+
+            foreach (var subject in subjects)
+            {
+                checkedListBox1.Items.Add(subject.Title);
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if(lecturers == null)
+            if (lecturers == null)
             {
                 lecturers = new List<Lecturer>();
             }
             if (ValidateInputs())
             {
-
+                // First, create a Lecturer object
                 Lecturer lecturer = repoLecturer.CreateLecturer(tbFirstName.Text, tbLastName.Text, tbEmail.Text, tbAddress.Text, tbGsm.Text, tbUsername.Text, tbPassword.Text);
+
+                // Initialize subject list
+                List<Subject> selectedSubjects = new List<Subject>();
+
+                // Populate selected subjects
+                foreach (object itemChecked in checkedListBox1.CheckedItems)
+                {
+                    string subjectName = itemChecked.ToString();
+                    Subject subject = subjects.FirstOrDefault(s => s.Title == subjectName);
+                    if (subject != null)
+                    {
+                        selectedSubjects.Add(subject);
+                    }
+                }
+
+                // Add selected subjects to the lecturer
+                lecturer.Subjects = selectedSubjects;
+
+                // Save lecturer
                 lecturers.Add(lecturer);
                 repoLecturer.WriteLecturerToFile(lecturers);
+
                 ShowMessageConfirm();
                 ClearTextBoxes();
             }
@@ -75,5 +111,6 @@ namespace PRA_Infoeduka
         {
             MessageBox.Show("Lecturer has been successfully added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }

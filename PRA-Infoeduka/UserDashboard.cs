@@ -35,7 +35,7 @@ namespace PRA_Infoeduka
             }
         }
 
-        private void btnNewPost_Click(object sender, EventArgs e)
+        private void btnNewPost_Click_1(object sender, EventArgs e)
         {
             formNewPost formNewPost = new formNewPost();
             LoadForm(formNewPost);
