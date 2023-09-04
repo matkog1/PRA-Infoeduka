@@ -28,86 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbTitle = new Label();
-            tbTitle = new TextBox();
-            tbYear = new TextBox();
-            lbAuthor = new Label();
-            tbAuthor = new TextBox();
-            label1 = new Label();
-            rtbMessage = new RichTextBox();
-            SuspendLayout();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.tbTitle = new System.Windows.Forms.TextBox();
+            this.tbYear = new System.Windows.Forms.TextBox();
+            this.lbAuthor = new System.Windows.Forms.Label();
+            this.tbAuthor = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rtbMessage = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
             // 
             // lbTitle
             // 
-            lbTitle.AutoSize = true;
-            lbTitle.Location = new Point(31, 17);
-            lbTitle.Name = "lbTitle";
-            lbTitle.Size = new Size(29, 15);
-            lbTitle.TabIndex = 0;
-            lbTitle.Text = "Title";
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lbTitle.Location = new System.Drawing.Point(31, 17);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(29, 15);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "Title";
             // 
             // tbTitle
             // 
-            tbTitle.Location = new Point(87, 9);
-            tbTitle.Name = "tbTitle";
-            tbTitle.Size = new Size(815, 23);
-            tbTitle.TabIndex = 1;
+            this.tbTitle.Location = new System.Drawing.Point(87, 9);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(815, 23);
+            this.tbTitle.TabIndex = 1;
             // 
             // tbYear
             // 
-            tbYear.Location = new Point(802, 38);
-            tbYear.Name = "tbYear";
-            tbYear.Size = new Size(100, 23);
-            tbYear.TabIndex = 2;
+            this.tbYear.Location = new System.Drawing.Point(802, 38);
+            this.tbYear.Name = "tbYear";
+            this.tbYear.Size = new System.Drawing.Size(100, 23);
+            this.tbYear.TabIndex = 2;
             // 
             // lbAuthor
             // 
-            lbAuthor.AutoSize = true;
-            lbAuthor.Location = new Point(31, 46);
-            lbAuthor.Name = "lbAuthor";
-            lbAuthor.Size = new Size(44, 15);
-            lbAuthor.TabIndex = 3;
-            lbAuthor.Text = "Author";
+            this.lbAuthor.AutoSize = true;
+            this.lbAuthor.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lbAuthor.Location = new System.Drawing.Point(31, 46);
+            this.lbAuthor.Name = "lbAuthor";
+            this.lbAuthor.Size = new System.Drawing.Size(44, 15);
+            this.lbAuthor.TabIndex = 3;
+            this.lbAuthor.Text = "Author";
             // 
             // tbAuthor
             // 
-            tbAuthor.Location = new Point(87, 43);
-            tbAuthor.Name = "tbAuthor";
-            tbAuthor.Size = new Size(168, 23);
-            tbAuthor.TabIndex = 4;
+            this.tbAuthor.Location = new System.Drawing.Point(87, 43);
+            this.tbAuthor.Name = "tbAuthor";
+            this.tbAuthor.Size = new System.Drawing.Size(168, 23);
+            this.tbAuthor.TabIndex = 4;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(31, 74);
-            label1.Name = "label1";
-            label1.Size = new Size(28, 15);
-            label1.TabIndex = 5;
-            label1.Text = "Text";
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(31, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Text";
             // 
             // rtbMessage
             // 
-            rtbMessage.Location = new Point(86, 79);
-            rtbMessage.Name = "rtbMessage";
-            rtbMessage.Size = new Size(816, 96);
-            rtbMessage.TabIndex = 6;
-            rtbMessage.Text = "";
+            this.rtbMessage.Location = new System.Drawing.Point(86, 79);
+            this.rtbMessage.Name = "rtbMessage";
+            this.rtbMessage.Size = new System.Drawing.Size(816, 96);
+            this.rtbMessage.TabIndex = 6;
+            this.rtbMessage.Text = "";
             // 
             // NewsPost
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(rtbMessage);
-            Controls.Add(label1);
-            Controls.Add(tbAuthor);
-            Controls.Add(lbAuthor);
-            Controls.Add(tbYear);
-            Controls.Add(tbTitle);
-            Controls.Add(lbTitle);
-            Name = "NewsPost";
-            Size = new Size(963, 217);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.rtbMessage);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbAuthor);
+            this.Controls.Add(this.lbAuthor);
+            this.Controls.Add(this.tbYear);
+            this.Controls.Add(this.tbTitle);
+            this.Controls.Add(this.lbTitle);
+            this.Name = "NewsPost";
+            this.Size = new System.Drawing.Size(963, 217);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
