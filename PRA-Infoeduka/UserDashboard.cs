@@ -41,6 +41,36 @@ namespace PRA_Infoeduka
             LoadForm(formNewPost);
         }
 
+        private void btnPosts_Click(object sender, EventArgs e)
+        {
+            ShowPostsPanel();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            formEditUser formEditUser = new formEditUser();
+            LoadForm(formEditUser);
+        }
+
+        private void btnSubjects_Click(object sender, EventArgs e)
+        {
+            formUserSubjects formUserSubjects = new formUserSubjects();
+            LoadForm(formUserSubjects);
+        }
+
+        private void btnNewsFeed_Click(object sender, EventArgs e)
+        {
+            formNewsFeedPostsAll formNewsFeedPostsAll = new formNewsFeedPostsAll();
+            LoadForm(formNewsFeedPostsAll);
+        }
+
+        private void btnEditPost_Click_1(object sender, EventArgs e)
+        {
+            formEditPost formEditPost = new formEditPost();
+            LoadForm(formEditPost);
+        }
+
+
         private void LoadForm(Form form)
         {
             panelMainShow.Controls.Clear();
@@ -55,59 +85,6 @@ namespace PRA_Infoeduka
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             return form;
-        }
-
-        private void btnEditPost_Click(object sender, EventArgs e)
-        {
-            formEditPost formEditPost = new formEditPost();
-            LoadForm(formEditPost);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ShowPostsPanel();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            formEditUser formEditUser = new formEditUser();
-            LoadForm(formEditUser);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            formUserSubjects formUserSubjects = new formUserSubjects();
-            LoadForm(formUserSubjects);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            formNewsFeedPostsAll formNewsFeedPostsAll = new formNewsFeedPostsAll();
-            LoadForm(formNewsFeedPostsAll);
-        }
-
-        private void btnUpload_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All Files (*.*)|*.*";
-                openFileDialog.Title = "Select an Image File";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string selectedFilePath = openFileDialog.FileName;
-
-                    try
-                    {
-
-                        pbProfile.Image = Image.FromFile(selectedFilePath);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error loading the image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
         }
     }
 }
