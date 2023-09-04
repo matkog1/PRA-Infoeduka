@@ -28,17 +28,15 @@ namespace DAL.Repos.PostRepo
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        string[] elements = line.Split(','); // Replace with your actual delimiter
+                        string[] elements = line.Split(',');
                         if (elements.Length >= 5)
                         {
                             Guid id = Guid.Parse(elements[0]);
                             string title = elements[1].Trim();
                             string year = elements[2].Trim();
-                            DateTime expirationDate = DateTime.Parse(elements[3].Trim()); // Convert string to DateTime
+                            DateTime expirationDate = DateTime.Parse(elements[3].Trim());
                             string text = elements[4].Trim();
 
-                            // Your Post constructor and object creation might be different.
-                            // Adjust accordingly.
                             Post post = new Post(id, title, year, expirationDate, text);
                             posts.Add(post);
                         }
