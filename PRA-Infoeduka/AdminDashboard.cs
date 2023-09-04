@@ -69,6 +69,11 @@ namespace PRA_Infoeduka
             LoadForm(formEditPost);
         }
 
+        private void buttonNews_Click(object sender, EventArgs e)
+        {
+            formNewsFeedPostsAll formNewsFeedPostsAll = new formNewsFeedPostsAll();
+            LoadForm(formNewsFeedPostsAll);
+        }
         private void ShowPostsPanel()
         {
             if (panelPosts.Visible)
@@ -120,5 +125,7 @@ namespace PRA_Infoeduka
             form.Dock = DockStyle.Fill;
             return form;
         }
+
+      
     }
 }

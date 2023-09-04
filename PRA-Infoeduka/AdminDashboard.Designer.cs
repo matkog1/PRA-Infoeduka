@@ -86,6 +86,7 @@
             buttonNews.Text = "News Feed";
             buttonNews.TextAlign = ContentAlignment.MiddleLeft;
             buttonNews.UseVisualStyleBackColor = true;
+            buttonNews.Click += buttonNews_Click;
             // 
             // buttonPosts
             // 
