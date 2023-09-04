@@ -45,6 +45,7 @@
             // 
             flpPosts.AutoScroll = true;
             flpPosts.BackColor = Color.DarkSlateGray;
+            flpPosts.ForeColor = SystemColors.ControlLightLight;
             flpPosts.Location = new Point(24, 82);
             flpPosts.Name = "flpPosts";
             flpPosts.Size = new Size(929, 582);

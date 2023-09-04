@@ -16,7 +16,7 @@ namespace DAL.Repos.LecturerRepo
 
         public List<Lecturer> LoadLecturerFromFile()
         {
-            // Initialize your subjects list
+            
             List<Lecturer> lecturers = new List<Lecturer>();
 
             string startupPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -29,11 +29,7 @@ namespace DAL.Repos.LecturerRepo
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        // Assuming each line in the file represents a Subject
-                        // and is formatted appropriately
-                        // Here, you parse each line to construct a Subject object
-                        // Then add it to the subjects list
-                        string[] elements = line.Split(','); // Replace with your actual delimiter
+                        string[] elements = line.Split(',');
                         if (elements.Length >= 5)
                         {
                             Lecturer lecturer = new Lecturer(elements[0], elements[1], elements[2], elements[3], elements[4], elements[5], elements[6]);

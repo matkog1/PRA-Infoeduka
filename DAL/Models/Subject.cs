@@ -31,7 +31,7 @@ namespace DAL.Models
         public static Subject Parse(string line)
         {
             string[] parts = line.Split(',');
-            if (parts.Length < 5) return null;  // Not a valid line
+            if (parts.Length < 5) return null;
 
             return new Subject(
                 parts[0].Trim(),

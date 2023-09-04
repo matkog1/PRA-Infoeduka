@@ -50,7 +50,7 @@ namespace DAL.Models
             }
 
             return new Post(
-            Guid.Parse(parts[0].Trim()), // Parsing the identifier
+            Guid.Parse(parts[0].Trim()), 
             parts[1].Trim(),
             parts[2].Trim(),
             validDateTime,

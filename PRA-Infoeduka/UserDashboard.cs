@@ -20,18 +20,18 @@ namespace PRA_Infoeduka
 
         private void LoadSettings()
         {
-            panelPosts.Visible = false;
+            pnlPostsMenu.Visible = false;
         }
 
         private void ShowPostsPanel()
         {
-            if (panelPosts.Visible)
+            if (pnlPostsMenu.Visible)
             {
-                panelPosts.Visible = false;
+                pnlPostsMenu.Visible = false;
             }
             else
             {
-                panelPosts.Visible = true;
+                pnlPostsMenu.Visible = true;
             }
         }
 
@@ -78,6 +78,12 @@ namespace PRA_Infoeduka
         {
             formUserSubjects formUserSubjects = new formUserSubjects();
             LoadForm(formUserSubjects);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            formNewsFeedPostsAll formNewsFeedPostsAll = new formNewsFeedPostsAll();
+            LoadForm(formNewsFeedPostsAll);
         }
     }
 }
