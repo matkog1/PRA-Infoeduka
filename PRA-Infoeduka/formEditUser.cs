@@ -92,6 +92,13 @@ namespace PRA_Infoeduka
             selectedLecturer.UserName = tbUsername.Text.Trim();
             selectedLecturer.Password = tbPassword.Text.Trim();
 
+            List<Subject> checkedSubjects = new List<Subject>();
+            foreach (Subject subject in checkedListBox1.CheckedItems)
+            {
+                checkedSubjects.Add(subject);
+            }
+            selectedLecturer.Subjects = checkedSubjects;
+
             // Find the index of the selected subject in the list
             int index = lecturers.FindIndex(x => x.Id == selectedLecturer.Id); // Assuming Code is unique
             if (index != -1)
