@@ -1,5 +1,6 @@
 ﻿using DAL.Models;
 using DAL.Repos.LecturerRepo;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,26 +38,17 @@ namespace PRA_Infoeduka
             string adminUsername = "admin";
             string adminPassword = "admin";
 
-            if ((username == adminUsername && password == adminPassword) ||
-                (lecturers != null && lecturers.Any(lecturer => lecturer.UserName == username && lecturer.Password == password)))
+            if (username == adminUsername && password == adminPassword) 
             {
-                if (username == adminUsername)
-                {
-                    AdminDashboard adminDashboard = new AdminDashboard();
-                    adminDashboard.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    UserDashboard userDashboard = new UserDashboard();
-                    userDashboard.Show();
-                    this.Hide();
-                }
+                AdminDashboard adminDashboard = new AdminDashboard();
+                adminDashboard.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Invalid username or password.", "Authentication Failed",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UserDashboard userDashboard = new UserDashboard();
+                userDashboard.Show();
+                this.Hide();
             }
         }
 

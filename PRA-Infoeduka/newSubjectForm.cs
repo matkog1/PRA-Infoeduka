@@ -24,7 +24,7 @@ namespace PRA_Infoeduka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (subjects == null) 
+            if (subjects == null)
             {
                 subjects = new List<Subject>();
             }

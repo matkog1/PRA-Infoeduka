@@ -291,8 +291,6 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private TextBox textBox1;
-        private TextBox textBox8;
         private ComboBox cbLecturers;
         private CheckedListBox checkedListBox1;
         private Button button1;

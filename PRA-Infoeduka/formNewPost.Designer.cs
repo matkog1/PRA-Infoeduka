@@ -123,6 +123,7 @@
             btnConfirm.TabIndex = 8;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click_1;
             // 
             // formNewPost
             // 

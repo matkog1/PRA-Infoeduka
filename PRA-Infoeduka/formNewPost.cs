@@ -32,7 +32,7 @@ namespace PRA_Infoeduka
             cbYear.DataSource = years;
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnConfirm_Click_1(object sender, EventArgs e)
         {
             if (posts == null)
             {
@@ -91,11 +91,6 @@ namespace PRA_Infoeduka
                     ((RichTextBox)c).Clear();
                 }
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

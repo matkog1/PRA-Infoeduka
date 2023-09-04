@@ -53,7 +53,7 @@ namespace DAL.Models
         public override string ToString()
         {
             string subjectsString = string.Join(";", Subjects.Select(s => s.Title));
-            return $"{FirstName}, {LastName}, {Email}, {Address}, {GSM}, {UserName}, {Password}, {subjectsString}";
+            return $"{Id},{FirstName}, {LastName}, {Email}, {Address}, {GSM}, {UserName}, {Password}, {subjectsString}";
         }
 
 

@@ -47,42 +47,42 @@
             tbTitle.Location = new Point(288, 40);
             tbTitle.Name = "tbTitle";
             tbTitle.Size = new Size(229, 23);
-            tbTitle.TabIndex = 0;
+            tbTitle.TabIndex = 1;
             // 
             // tbLectureType
             // 
             tbLectureType.Location = new Point(288, 69);
             tbLectureType.Name = "tbLectureType";
             tbLectureType.Size = new Size(229, 23);
-            tbLectureType.TabIndex = 1;
+            tbLectureType.TabIndex = 2;
             // 
             // tbYear
             // 
             tbYear.Location = new Point(288, 127);
             tbYear.Name = "tbYear";
             tbYear.Size = new Size(229, 23);
-            tbYear.TabIndex = 2;
+            tbYear.TabIndex = 4;
             // 
             // tbEcts
             // 
             tbEcts.Location = new Point(288, 156);
             tbEcts.Name = "tbEcts";
             tbEcts.Size = new Size(229, 23);
-            tbEcts.TabIndex = 3;
+            tbEcts.TabIndex = 5;
             // 
             // tbCode
             // 
             tbCode.Location = new Point(288, 98);
             tbCode.Name = "tbCode";
             tbCode.Size = new Size(229, 23);
-            tbCode.TabIndex = 5;
+            tbCode.TabIndex = 3;
             // 
             // btnConfirm
             // 
             btnConfirm.Location = new Point(713, 415);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(75, 23);
-            btnConfirm.TabIndex = 6;
+            btnConfirm.TabIndex = 7;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
             btnConfirm.Click += button1_Click;
@@ -92,7 +92,7 @@
             btnDiscard.Location = new Point(12, 415);
             btnDiscard.Name = "btnDiscard";
             btnDiscard.Size = new Size(75, 23);
-            btnDiscard.TabIndex = 7;
+            btnDiscard.TabIndex = 6;
             btnDiscard.Text = "Discard";
             btnDiscard.UseVisualStyleBackColor = true;
             // 

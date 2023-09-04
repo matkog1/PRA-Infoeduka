@@ -13,5 +13,10 @@ namespace DAL.Repos.PostRepo
 
         public void WritePostToFile(List<Post> posts);
         public List<Post> LoadPostsFromFile();
+
+        public void RemovePostFromFile(Guid postId);
+
+        public void AppendPostToFile(Post post);
+
     }
 }

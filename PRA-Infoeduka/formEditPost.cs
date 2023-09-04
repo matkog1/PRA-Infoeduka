@@ -86,18 +86,21 @@ namespace PRA_Infoeduka
             selectedPost.Message = rtbText.Text.Trim();
 
             // Find the index of the selected subject in the list
-            int index = posts.FindIndex(x => x.Id == selectedPost.Id); // Assuming Code is unique
+            int index = posts.FindIndex(x => x.Id == selectedPost.Id);
             if (index != -1)
             {
                 // Replace the item in the list
                 posts[index] = selectedPost;
+
+                // Remove the old post from the file
+                repoPost.RemovePostFromFile(selectedPost.Id);
+
+                // Append the updated post to the file
+                repoPost.AppendPostToFile(selectedPost);
+
+                // Optionally, inform the user that the operation was successful
+                MessageBox.Show("Subject updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            // Now, re-write the updated subjectsList back to the file.
-            repoPost.WritePostToFile(posts);
-
-            // Optionally, inform the user that the operation was successful
-            MessageBox.Show("Subject updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

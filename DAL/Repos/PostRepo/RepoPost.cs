@@ -57,7 +57,7 @@ namespace DAL.Repos.PostRepo
             if (File.Exists(filePath))
             {
 
-                using (StreamWriter writer = new StreamWriter(filePath))
+                using (StreamWriter writer = new StreamWriter(filePath,append: true))
                 {
                     foreach (Post post in posts)
                     {
@@ -75,6 +75,46 @@ namespace DAL.Repos.PostRepo
                         writer.WriteLine(post.ToString());
                     }
                 }
+            }
+        }
+
+        public void RemovePostFromFile(Guid postId)
+        {
+            string startupPath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(startupPath, "ListOfPosts.txt");
+
+            List<Post> remainingPosts = new List<Post>();
+
+            if (File.Exists(filePath))
+            {
+                foreach (string line in File.ReadLines(filePath))
+                {
+                    Post post = Post.Parse(line);
+                    if (post != null && post.Id != postId)
+                    {
+                        remainingPosts.Add(post);
+                    }
+                }
+
+                // Write the remaining posts back to the file
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    foreach (Post post in remainingPosts)
+                    {
+                        writer.WriteLine(post.ToString());
+                    }
+                }
+            }
+        }
+
+        public void AppendPostToFile(Post post)
+        {
+            string startupPath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(startupPath, "ListOfPosts.txt");
+
+            using (StreamWriter writer = File.AppendText(filePath))
+            {
+                writer.WriteLine(post.ToString());
             }
         }
     }
